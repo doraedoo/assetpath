@@ -208,9 +208,9 @@
         }
 
         #screen-5 .container {
-            max-width: 100%;
-            padding: 0;
-            margin: 0;
+            max-width: 1200px;
+            padding: 0 40px;
+            margin: 0 auto;
         }
 
         .screen-5-title {
@@ -232,12 +232,14 @@
         .topic-card {
             display: flex;
             flex-direction: column;
-            padding: 24px;
+            justify-content: space-between;
+            padding: 20px;
             background: white;
             border: 2px solid #e5e7eb;
             border-radius: 8px;
             text-decoration: none;
             transition: all 0.3s ease;
+            min-height: 120px;
             color: inherit;
         }
 
@@ -251,15 +253,15 @@
             font-size: 18px;
             font-weight: 700;
             color: #0F172A;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .topic-card-desc {
             font-size: 15px;
             color: #64748B;
-            line-height: 1.7;
+            line-height: 1.6;
             flex: 1;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .topic-card-link {
@@ -445,17 +447,21 @@
             }
 
             #screen-5 {
-                padding: 40px 24px;
+                padding: 40px 0;
+            }
+
+            #screen-5 .container {
+                padding: 0 24px;
             }
 
             .topic-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 gap: 16px;
-                margin-top: 30px;
             }
 
             .topic-card {
                 padding: 16px;
+                min-height: 100px;
             }
 
             .topic-card-title {
