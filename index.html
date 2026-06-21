@@ -236,10 +236,12 @@
             gap: 20px;
             overflow-x: auto;
             padding-bottom: 12px;
-            margin: 0 -40px;
-            padding: 0 40px 20px 40px;
+            margin: 0;
+            padding-left: 40px;
+            padding-right: 40px;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
         }
 
         #screen-5 .content-card {
@@ -434,7 +436,8 @@
            =================================== */
         @media (max-width: 768px) {
             .screen {
-                padding: 50px 24px;
+                min-height: auto;
+                padding: 60px 24px;
             }
 
             #screen-1 {
@@ -445,17 +448,16 @@
                 padding: 60px 24px;
             }
 
-            #screen-5 {
-                padding: 60px 0;
-            }
-
-            #screen-5-title-wrapper {
-                padding: 0 24px;
-            }
-
             #screen-5 .content-cards {
-                margin: 0 -24px;
-                padding: 0 24px 20px 24px;
+                margin: 0;
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-bottom: 12px;
+                gap: 16px;
+            }
+
+            #screen-5 .content-card {
+                flex: 0 0 280px;
             }
 
             .hero-title {
