@@ -234,6 +234,9 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
             margin-top: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .topic-card {
@@ -481,7 +484,12 @@
             }
 
             .screen-6-title {
-                white-space: nowrap;
+                white-space: normal;
+            }
+
+            .screen-6-title br {
+                display: none;
+                content: ' ';
             }
 
             .hero-title {
@@ -614,28 +622,28 @@
         </div>
         <div class="topic-grid">
             <a href="/asset" class="topic-card">
-                <div class="topic-card-title">资产配置</div>
+                <div class="topic-card-title">我的资产该怎么配置？</div>
                 <div class="topic-card-desc">
                     如何在全球配置资产，实现分散风险和增长。
                 </div>
                 <div class="topic-card-link">查看内容 →</div>
             </a>
             <a href="/company" class="topic-card">
-                <div class="topic-card-title">企业结构</div>
+                <div class="topic-card-title">应该用什么公司结构？</div>
                 <div class="topic-card-desc">
                     选择适合你的公司注册地和运营结构。
                 </div>
                 <div class="topic-card-link">查看内容 →</div>
             </a>
             <a href="/identity" class="topic-card">
-                <div class="topic-card-title">身份规划</div>
+                <div class="topic-card-title">是否需要第二身份？</div>
                 <div class="topic-card-desc">
                     长期居住地、永居、护照选择的完整考量。
                 </div>
                 <div class="topic-card-link">查看内容 →</div>
             </a>
             <a href="/tax" class="topic-card">
-                <div class="topic-card-title">税务规划</div>
+                <div class="topic-card-title">如何合法优化税务？</div>
                 <div class="topic-card-desc">
                     理解税务结构，合法优化你的税负。
                 </div>
