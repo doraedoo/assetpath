@@ -224,58 +224,56 @@
             margin-bottom: 50px;
         }
 
-        .content-cards {
+        /* 第五屏主题入口网格 */
+        .topic-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
+            margin-top: 50px;
         }
 
-        /* 第五屏横向内容流 */
-        #screen-5 .content-cards {
+        .topic-card {
             display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding-bottom: 12px;
-            margin: 0;
-            padding-left: 40px;
-            padding-right: 40px;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            scroll-behavior: smooth;
-        }
-
-        #screen-5 .content-card {
-            flex: 0 0 320px;
-            scroll-snap-align: start;
-            margin: 0;
-        }
-
-        /* 隐藏滚动条但保持可滚动 */
-        #screen-5 .content-cards::-webkit-scrollbar {
-            height: 6px;
-        }
-
-        #screen-5 .content-cards::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        #screen-5 .content-cards::-webkit-scrollbar-thumb {
-            background: #e5e7eb;
-            border-radius: 3px;
-        }
-
-        .content-card {
+            flex-direction: column;
             padding: 24px;
-            background: #f9fafb;
+            background: white;
+            border: 2px solid #e5e7eb;
             border-radius: 8px;
-            border-left: 4px solid #0EA5E9;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            color: inherit;
         }
 
-        .content-card-title {
+        .topic-card:hover {
+            border-color: #0EA5E9;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .topic-card-title {
             font-size: 18px;
             font-weight: 700;
             color: #0F172A;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .topic-card-desc {
+            font-size: 15px;
+            color: #64748B;
+            line-height: 1.7;
+            flex: 1;
+            margin-bottom: 16px;
+        }
+
+        .topic-card-link {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0EA5E9;
+            transition: all 0.3s ease;
+        }
+
+        .topic-card:hover .topic-card-link {
+            color: #0284C7;
         }
 
         .content-card-desc {
@@ -448,16 +446,37 @@
                 padding: 60px 24px;
             }
 
-            #screen-5 .content-cards {
-                margin: 0;
-                padding-left: 24px;
-                padding-right: 24px;
-                padding-bottom: 12px;
-                gap: 16px;
+            #screen-5 {
+                padding: 40px 24px;
             }
 
-            #screen-5 .content-card {
-                flex: 0 0 280px;
+            #screen-5-title-wrapper {
+                padding: 0 24px;
+                margin-bottom: 30px;
+            }
+
+            .topic-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                margin-top: 30px;
+            }
+
+            .topic-card {
+                padding: 16px;
+            }
+
+            .topic-card-title {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .topic-card-desc {
+                font-size: 14px;
+                margin-bottom: 12px;
+            }
+
+            .screen-6-title {
+                white-space: nowrap;
             }
 
             .hero-title {
@@ -582,38 +601,42 @@
         </div>
     </section>
 
-    <!-- 第五屏：内容卡片 -->
+    <!-- 第五屏：主题入口 -->
     <section class="screen" id="screen-5">
         <div id="screen-5-title-wrapper">
             <h2 class="screen-5-title">
-                从这里开始了解
+                从你最关心的问题开始
             </h2>
         </div>
-        <div class="content-cards">
-            <div class="content-card">
-                <div class="content-card-title">为什么很多人高估了 LLC？</div>
-                <div class="content-card-desc">
-                    看起来最简单的选择，往往隐藏着最多的坑。我们讲清楚真相。
+        <div class="topic-grid">
+            <a href="/asset" class="topic-card">
+                <div class="topic-card-title">资产配置</div>
+                <div class="topic-card-desc">
+                    如何在全球配置资产，实现分散风险和增长。
                 </div>
-            </div>
-            <div class="content-card">
-                <div class="content-card-title">美国遗产税真的影响普通人吗？</div>
-                <div class="content-card-desc">
-                    这是最大的财务焦虑来源。但它真的值得焦虑吗？用数据讲清。
+                <div class="topic-card-link">查看内容 →</div>
+            </a>
+            <a href="/company" class="topic-card">
+                <div class="topic-card-title">企业结构</div>
+                <div class="topic-card-desc">
+                    选择适合你的公司注册地和运营结构。
                 </div>
-            </div>
-            <div class="content-card">
-                <div class="content-card-title">嘉信最大的优势其实不是手续费</div>
-                <div class="content-card-desc">
-                    所有人都在比较费率。但决定性因素往往在别处。
+                <div class="topic-card-link">查看内容 →</div>
+            </a>
+            <a href="/identity" class="topic-card">
+                <div class="topic-card-title">身份规划</div>
+                <div class="topic-card-desc">
+                    长期居住地、永居、护照选择的完整考量。
                 </div>
-            </div>
-            <div class="content-card">
-                <div class="content-card-title">第二身份最大的成本不是钱</div>
-                <div class="content-card-desc">
-                    永居、护照、签证的隐形成本，往往比直接支出更大。
+                <div class="topic-card-link">查看内容 →</div>
+            </a>
+            <a href="/tax" class="topic-card">
+                <div class="topic-card-title">税务规划</div>
+                <div class="topic-card-desc">
+                    理解税务结构，合法优化你的税负。
                 </div>
-            </div>
+                <div class="topic-card-link">查看内容 →</div>
+            </a>
         </div>
     </section>
 
