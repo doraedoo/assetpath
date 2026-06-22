@@ -151,10 +151,9 @@
     <script src="/js/articles-loader.js"></script>
     <script>
         function getArticleSlug() {
-            const path = window.location.pathname;
-            const match = path.match(/^\/articles\/([a-z0-9-]+)(?:\.html)?$/);
-            return match ? match[1] : null;
-        }
+    const params = new URLSearchParams(window.location.search);
+    return params.get('slug');
+}
         
         document.addEventListener('DOMContentLoaded', async function() {
             const slug = getArticleSlug();
