@@ -177,6 +177,30 @@ async function renderArticlesList(containerId, options = {}) {
 async function renderArticleDetail(slug, containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
+
+  container.innerHTML = 'STEP 1';
+
+  const article = await getArticle(slug);
+
+  container.innerHTML = 'STEP 2';
+
+  if (!article) {
+    container.innerHTML = 'ARTICLE NOT FOUND';
+    return;
+  }
+
+  const marked = await loadMarked();
+
+  container.innerHTML = 'STEP 3';
+
+  const html = marked.parse(article.content);
+
+  container.innerHTML = 'STEP 4';
+
+  container.innerHTML = html;
+}
+  const container = document.getElementById(containerId);
+  if (!container) return;
   
   container.innerHTML = '<div class="loading">加载中...</div>';
   
