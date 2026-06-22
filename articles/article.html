@@ -150,7 +150,9 @@
     <!-- Articles Loader - Markdown Driven -->
     <script src="/js/articles-loader.js"></script>
     <script>
-        function getArticleSlug() {
+    function getArticleSlug() {
+    return new URLSearchParams(window.location.search).get('slug');
+} {
     const params = new URLSearchParams(window.location.search);
     return params.get('slug');
 }
