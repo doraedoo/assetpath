@@ -1,0 +1,487 @@
+/* ===================================
+   AssetPath Articles System CSS
+   长文阅读优化版
+   =================================== */
+
+:root {
+  --navy: #0F172A;
+  --slate-600: #64748B;
+  --slate-400: #94A3B8;
+  --sky-blue: #0EA5E9;
+  --sky-blue-dark: #0284C7;
+  --sky-blue-light: #38BDF8;
+  --border-color: #E2E8F0;
+  --bg-light: #F8FAFC;
+}
+
+/* ===================================
+   文章列表页面
+   =================================== */
+
+.articles-page {
+  background: white;
+  min-height: 100vh;
+}
+
+.articles-header {
+  background: white;
+  border-bottom: 1px solid var(--border-color);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.articles-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.articles-header p {
+  font-size: 16px;
+  color: var(--slate-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.articles-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* ===================================
+   文章卡片 - 简洁专业风格
+   =================================== */
+
+.article-card {
+  display: block;
+  padding: 28px 0;
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+  background: white;
+}
+
+.article-card:last-child {
+  border-bottom: none;
+}
+
+.article-card:hover {
+  opacity: 0.8;
+  border-bottom-color: var(--sky-blue);
+}
+
+.article-card-header {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.article-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.5;
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.article-card:hover .article-card-title {
+  color: var(--sky-blue);
+}
+
+.article-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--slate-600);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.article-card-excerpt {
+  font-size: 14px;
+  color: var(--slate-600);
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.article-card-footer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.article-category {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--sky-blue);
+  color: white;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================
+   文章详情页面 - 长文阅读优化
+   =================================== */
+
+.article-detail {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.article-header {
+  padding: 60px 40px;
+  background: white;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 50px;
+}
+
+.article-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 28px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.article-info {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--slate-600);
+  flex-wrap: wrap;
+}
+
+.article-category-badge {
+  padding: 5px 14px;
+  background: var(--sky-blue);
+  color: white;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+/* ===================================
+   文章正文样式 - 长文优化
+   =================================== */
+
+.article-body {
+  padding: 0 40px 50px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--navy);
+}
+
+.article-body h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 50px 0 24px 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  line-height: 1.4;
+}
+
+.article-body h2:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.article-body h3 {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 36px 0 18px 0;
+  line-height: 1.4;
+}
+
+.article-body h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 28px 0 14px 0;
+}
+
+.article-body p {
+  margin-bottom: 20px;
+}
+
+.article-body a {
+  color: var(--sky-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.article-body a:hover {
+  color: var(--sky-blue-dark);
+  text-decoration: underline;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 20px;
+  padding-left: 28px;
+}
+
+.article-body li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.article-body blockquote {
+  margin: 28px 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--sky-blue);
+  color: var(--slate-600);
+  background: var(--bg-light);
+  padding: 20px 20px 20px 20px;
+  border-radius: 2px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.article-body code {
+  background: var(--bg-light);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--sky-blue);
+}
+
+.article-body pre {
+  background: #1E293B;
+  color: #E2E8F0;
+  padding: 20px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 28px 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.article-body pre code {
+  background: none;
+  color: #E2E8F0;
+  padding: 0;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+.article-body table th {
+  background: var(--bg-light);
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.article-body table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.article-body table tr:hover {
+  background: var(--bg-light);
+}
+
+/* ===================================
+   加载和错误状态
+   =================================== */
+
+.loading,
+.error {
+  text-align: center;
+  padding: 60px 40px;
+  font-size: 16px;
+  color: var(--slate-600);
+}
+
+.error {
+  color: #E11D48;
+}
+
+/* ===================================
+   响应式设计
+   =================================== */
+
+@media (max-width: 768px) {
+  .articles-header {
+    padding: 40px 24px;
+  }
+
+  .articles-header h1 {
+    font-size: 32px;
+  }
+
+  .articles-container {
+    padding: 40px 24px;
+  }
+
+  .article-card {
+    padding: 20px 0;
+  }
+
+  .article-header {
+    padding: 40px 24px;
+    margin-bottom: 30px;
+  }
+
+  .article-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .article-meta {
+    flex-direction: column;
+  }
+
+  .article-body {
+    padding: 0 24px 30px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .article-body h2 {
+    font-size: 22px;
+    margin: 36px 0 18px 0;
+  }
+
+  .article-body h3 {
+    font-size: 17px;
+    margin: 28px 0 14px 0;
+  }
+
+  .article-card-meta {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .article-card-excerpt {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .articles-header h1 {
+    font-size: 24px;
+  }
+
+  .article-title {
+    font-size: 24px;
+  }
+
+  .article-body {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .article-body h2 {
+    font-size: 18px;
+    margin: 28px 0 14px 0;
+  }
+
+  .article-body h3 {
+    font-size: 15px;
+  }
+
+  .article-info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .article-card-excerpt {
+    font-size: 13px;
+  }
+}
+
+/* ===================================
+   暗色模式支持（可选）
+   =================================== */
+
+@media (prefers-color-scheme: dark) {
+  .articles-page {
+    background: #0F172A;
+    color: #E2E8F0;
+  }
+
+  .article-card {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .article-card-title {
+    color: #E2E8F0;
+  }
+
+  .article-title,
+  .article-body h2,
+  .article-body h3,
+  .article-body h4 {
+    color: #E2E8F0;
+  }
+
+  .article-body {
+    color: #CBD5E1;
+  }
+
+  .article-body code {
+    background: #1E293B;
+    color: #38BDF8;
+  }
+
+  .article-body blockquote {
+    background: #1E293B;
+    border-left-color: #0EA5E9;
+    color: #CBD5E1;
+  }
+
+  .article-body table {
+    border-color: #334155;
+  }
+
+  .article-body table th {
+    background: #1E293B;
+    border-bottom-color: #334155;
+  }
+
+  .article-body table td {
+    border-bottom-color: #334155;
+  }
+
+  .article-body table tr:hover {
+    background: #1E293B;
+  }
+}
