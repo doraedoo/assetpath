@@ -209,7 +209,9 @@ async function renderArticleDetail(slug, containerId) {
     </article>
   `;
   
+  requestAnimationFrame(() => {
   container.innerHTML = articleHtml;
+});
   
   updatePageSEO({
     title: `${article.title} | AssetPath`,
