@@ -154,7 +154,7 @@ async function renderArticlesList(containerId, options = {}) {
   }
   
   const html = filtered.map(article => `
-    <a href="/articles/${article.slug}" class="article-card">
+    <a href="/articles/article.html?slug=${article.slug}" class="article-card">
       <div class="article-card-header">
         <h3 class="article-card-title">${escapeHtml(article.title)}</h3>
         <div class="article-card-meta">
