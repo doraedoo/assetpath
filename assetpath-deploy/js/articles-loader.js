@@ -20,7 +20,7 @@ async function loadMarked() {
   
   return new Promise((resolve) => {
     const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/marked@11.0.0/lib/marked.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js
     script.onload = () => {
       resolve(window.marked);
     };
