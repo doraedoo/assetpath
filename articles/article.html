@@ -149,23 +149,21 @@
     
     <!-- Articles Loader - Markdown Driven -->
     <script src="/js/articles-loader.js"></script>
-    <script>
+<script>
     function getArticleSlug() {
-    return new URLSearchParams(window.location.search).get('slug');
-} {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('slug');
-}
-        
-        document.addEventListener('DOMContentLoaded', async function() {
-            const slug = getArticleSlug();
-            if (slug) {
-                await renderArticleDetail(slug, 'article-container');
-            } else {
-                document.getElementById('article-container').innerHTML = 
-                    '<div class="error">文章未找到。<a href="/articles">返回文章列表</a></div>';
-            }
-        });
-    </script>
+        return new URLSearchParams(window.location.search).get('slug');
+    }
+
+    document.addEventListener('DOMContentLoaded', async function() {
+        const slug = getArticleSlug();
+
+        if (slug) {
+            await renderArticleDetail(slug, 'article-container');
+        } else {
+            document.getElementById('article-container').innerHTML =
+                '<div class="error">文章未找到。<a href="/articles">返回文章列表</a></div>';
+        }
+    });
+</script>
 </body>
 </html>
