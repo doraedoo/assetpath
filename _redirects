@@ -20,7 +20,6 @@
 
 # 文章路由
 /articles /articles/index.html 200
-/articles/* /articles/article.html 200
 
 /index.html 200
 /*.html 200
