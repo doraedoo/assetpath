@@ -1,1 +1,34 @@
-mmm
+[
+  {
+    "id": "004",
+    "title": "香港公司还是美国LLC？你可能问错了问题",
+    "url": "004-hongkong-vs-llc-final.html",
+    "date": "2026-06-24",
+    "excerpt": "很多人纠结香港和美国，却从未思考过资金流动。真正决定答案的，从来不是注册费用。",
+    "readTime": "6分钟阅读"
+  },
+  {
+    "id": "003",
+    "title": "滞胀时代：为什么越来越努力的人，反而越来越焦虑？",
+    "url": "003-stagflation-and-asset-location.html",
+    "date": "2026-06-23",
+    "excerpt": "未来真正危险的，或许不是滞胀。而是在变化来临时，你发现自己没有Plan B。",
+    "readTime": "8分钟阅读"
+  },
+  {
+    "id": "002",
+    "title": "你真的需要第二身份吗？",
+    "url": "002-second-identity.html",
+    "date": "2026-06-22",
+    "excerpt": "很多人研究第二身份，却从来没有想清楚自己到底想解决什么问题。",
+    "readTime": "5分钟阅读"
+  },
+  {
+    "id": "001",
+    "title": "复杂世界里，找到属于自己的蓝图",
+    "url": "001-blueprint.html",
+    "date": "2026-06-22",
+    "excerpt": "信息越来越多，决策越来越难。",
+    "readTime": "5分钟阅读"
+  }
+]
