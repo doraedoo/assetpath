@@ -407,5 +407,54 @@
             <p>© 2024 AssetPath. All rights reserved.</p>
         </footer>
     </div>
+    <script>
+fetch('articles.json')
+  .then(response => response.json())
+  .then(articles => {
+
+    const container =
+      document.getElementById('articles-list');
+
+    container.innerHTML =
+      articles.map(article => `
+
+      <article class="article-item">
+        <a href="${article.url}"
+           class="article-link">
+
+          <div class="article-meta">
+            <span class="article-number">
+              AssetPath ${article.id}
+            </span>
+
+            <div class="divider"></div>
+
+            <span class="article-date">
+              ${article.date}
+            </span>
+          </div>
+
+          <h2 class="article-title">
+            ${article.title}
+          </h2>
+
+          <p class="article-excerpt">
+            ${article.excerpt}
+          </p>
+
+          <div class="article-footer">
+            <span class="read-time">
+              ${article.readTime}
+            </span>
+          </div>
+
+        </a>
+      </article>
+
+      `).join('');
+
+  })
+  .catch(error => console.error(error));
+</script>
 </body>
 </html>
