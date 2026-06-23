@@ -180,69 +180,6 @@
             color: var(--text-primary);
         }
 
-        /* 文章底部 - 上一篇/下一篇 */
-        .article-navigation {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .nav-label {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .nav-articles {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .nav-article {
-            text-decoration: none;
-            padding: 1.5rem;
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        .nav-article:hover {
-            border-color: var(--primary);
-            background: var(--primary-light);
-        }
-
-        .nav-article-direction {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-        }
-
-        .nav-article-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            line-height: 1.5;
-        }
-
-        .nav-article:hover .nav-article-title {
-            color: var(--primary);
-        }
-
-        .nav-articles.single {
-            grid-template-columns: 1fr;
-            max-width: 50%;
-        }
-
         /* 页脚 */
         .article-footer {
             margin-top: 4rem;
@@ -279,15 +216,6 @@
                 font-size: 0.85rem;
             }
 
-            .nav-articles {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .nav-articles.single {
-                max-width: 100%;
-            }
-
             .back-link-wrapper {
                 padding: 1rem 1rem 0.5rem;
             }
@@ -316,15 +244,10 @@
                 padding: 1rem;
                 margin: 1.5rem 0;
             }
-
-            .nav-article {
-                padding: 1rem;
-            }
         }
 
         @media print {
             .back-link-wrapper,
-            .article-navigation,
             .article-footer {
                 display: none;
             }
@@ -343,7 +266,7 @@
 <body>
     <!-- 返回链接 -->
     <div class="back-link-wrapper">
-        <a href="/#screen-5" class="back-link">返回文章列表</a>
+        <a href="/articles/" class="back-link">返回文章列表</a>
     </div>
 
     <!-- 文章 -->
@@ -410,16 +333,11 @@
             </p>
         </div>
 
-        <!-- 上一篇/下一篇 导航 -->
-        <nav class="article-navigation">
-    <span class="nav-label">更多文章</span>
-    <div class="nav-articles single">
-        <a href="002-second-identity.html" class="nav-article">
-            <div class="nav-article-direction">下一篇 →</div>
-            <div class="nav-article-title">你真的需要第二身份吗？</div>
-        </a>
-    </div>
-</nav>
+        <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid #E5E7EB;">
+            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">
+                ← 返回文章列表
+            </a>
+        </div>
     </article>
 
     <!-- 页脚 -->
