@@ -1,6 +1,0 @@
-{
-  "articles": [
-    { "slug": "blueprint", "file": "001-blueprint.md" },
-    { "slug": "second-identity", "file": "002-second-identity.md" }
-  ]
-}
