@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么样的人真的需要第二身份？ - AssetPath</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0F4A8F;
+            --primary-light: #1E5BA8;
+            --primary-lighter: #E6F1FB;
+            --border: #E5E7EB;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --bg-light: #FFFFFF;
+            --bg-lighter: #F9FAFB;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-light);
+        }
+
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .brand-zh {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--primary-light);
+        }
+
+        /* Article Container */
+        .article-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-lighter);
+            padding-bottom: 2rem;
+        }
+
+        .article-number {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .article-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+        }
+
+        .article-meta span {
+            margin-right: 1rem;
+        }
+
+        /* Article Content */
+        .article-content {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text-primary);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Emphasis Box */
+        .emphasis-box {
+            background: var(--primary-lighter);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .emphasis-box p {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Article Footer */
+        .article-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-articles {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-lighter);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .back-to-articles:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.5rem;
+            }
+
+            .article-wrapper {
+                padding: 1.5rem 1rem;
+            }
+
+            nav {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/" class="brand">
+                AssetPath
+                <span class="brand-zh">资产蓝图</span>
+            </a>
+            <a href="index.html" class="back-link">← 返回文章列表</a>
+        </nav>
+    </header>
+
+    <!-- Article -->
+    <article class="article-wrapper">
+        <div class="article-header">
+            <div class="article-number">AssetPath 002</div>
+            <h1 class="article-title">什么样的人真的需要第二身份？</h1>
+            <div class="article-meta">
+                <span>2026年6月22日</span>
+                <span>5分钟阅读</span>
+            </div>
+        </div>
+
+        <div class="article-content">
+            <p>如果你研究过第二身份，大概率听过这些话。身份越早办越好。以后肯定会用到。多个身份总没坏处。现在不办，以后就晚了。每个人说得都挺有道理。听得越多，脑子反而越乱。</p>
+
+            <p>问题在于，说这些话的人，很多时候根本不是在讨论同一个问题。</p>
+
+            <p>有人做跨境生意，客户在美国，供应商在东南亚，每天都在和银行、支付、税务打交道。有人准备送孩子出国，研究学校、研究学区、研究未来申请。还有人每年都会去泰国待几个月，经常看房子，总说以后退休了就过去。</p>
+
+            <p>三个人都在研究第二身份。</p>
+
+            <p>但坐下来聊，很快就会发现，他们聊的根本不是同一个东西。一个人在聊生意。一个人在聊孩子。一个人在聊未来的生活。身份只是他们共同提到的那个词。</p>
+
+            <p>有个朋友研究身份很多年。欧洲看了一圈，亚洲看了一圈，拉美也看了一圈。政策变化比很多中介知道得还快，微信群加了不少，收藏夹里全是各国身份项目。</p>
+
+            <p>有次吃饭聊到这个话题。有人问他：你最想解决什么问题？</p>
+
+            <p>桌上忽然安静了一下。</p>
+
+            <p>他说：其实我也不知道。就是觉得应该有一个。</p>
+
+            <p>没人笑。因为很多人都有过这种感觉。总觉得未来会发生什么，总觉得应该提前准备，总觉得别人都在研究，自己不能落下。</p>
+
+            <p>这种感觉不奇怪。真正奇怪的是，很多人花了大量时间研究国家、研究项目、研究政策，却很少花时间研究自己。</p>
+
+            <p>有的人担心孩子未来。有的人担心事业未来。有的人担心资产未来。有的人说不清具体担心什么，只是想给自己留条后路。这些问题放在一起，看起来都像身份问题。其实未必。</p>
+
+            <p>有人最后办了身份，解决了问题。也有人办完以后，发现原来的问题还在那里。孩子还是要选学校。生意还是要做。资产还是要配置。生活还是要自己决定。一本护照没有帮他解决这些问题。</p>
+
+            <p>有时候，人们以为自己在研究身份，其实是在研究别的东西。</p>
+
+            <p>研究孩子的未来。</p>
+
+            <p>研究事业的未来。</p>
+
+            <p>研究生活的未来。</p>
+
+            <p>研究自己对未来的不确定。</p>
+
+            <p>身份只是刚好出现在这些问题旁边，于是看上去变得特别重要。</p>
+
+            <p>如果明天醒来，你已经拥有第二身份。然后呢？你希望它帮你解决什么问题？</p>
+
+            <p>这个问题看起来很简单。但很多人答不出来。有人会说，我能在那个国家工作。有人会说，我能保护资产。有人会说，我能给孩子更多选择。继续往下问几句。很多答案就开始变得模糊。</p>
+
+            <p>所以，真正困难的，往往不是选择哪个国家。而是搞清楚自己到底在寻找什么。</p>
+
+            <p>有人寻找教育机会。</p>
+
+            <p>有人寻找事业空间。</p>
+
+            <p>有人寻找生活方式。</p>
+
+            <p>有人寻找安全感。</p>
+
+            <p>问题不同。答案大概率也不会一样。</p>
+
+            <p>在想清楚这个问题之前，研究哪个国家、哪个项目、哪本护照，意义都有限。因为决定方向的，从来不是地图。而是你要去哪里。</p>
+
+            <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--primary); font-weight: 600;">
+                Stop Researching.<br>
+                Start Deciding.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="article-footer">
+            <p class="tagline">Stop Researching. Start Deciding.</p>
+            <a href="index.html" class="back-to-articles">← 返回文章列表</a>
+        </div>
+    </article>
+</body>
+</html>
