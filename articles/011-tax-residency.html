@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>税务居民为什么会影响跨境规划？- AssetPath 资产蓝图</title>
+    <meta name="description" content="税务居民为什么会影响跨境规划？税务居民身份不是税务问题，而是整个跨境规划的总开关。">
+    <meta name="author" content="AssetPath">
+    <meta property="og:title" content="税务居民为什么会影响跨境规划？">
+    <meta property="og:description" content="税务居民为什么会影响跨境规划？税务居民身份不是税务问题，而是整个跨境规划的总开关。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://assetpath.app/articles/011-tax-residency.html">
+    <meta property="og:site_name" content="AssetPath">
+    <meta property="article:published_time" content="2026-06-27">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #0EA5E9;
+            --primary-dark: #0284C7;
+            --primary-light: #E0F2FE;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --border: #E5E7EB;
+            --bg-light: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .back-link-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover { color: var(--primary-dark); }
+        .back-link::before { content: "←"; margin-right: 0.5rem; font-size: 1.1rem; }
+
+        .article-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        .article-header { margin-bottom: 2.5rem; }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .article-number {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-date { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .article-title {
+            font-size: 2.125rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-summary {
+            font-size: 1.125rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-primary);
+        }
+
+        .article-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-content p:last-child { margin-bottom: 0; }
+
+        .article-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li { margin-bottom: 0.5rem; }
+
+        .reading-section {
+            background: #F9FAFB;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2.5rem;
+        }
+
+        .reading-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .reading-category { margin-bottom: 1.5rem; }
+
+        .reading-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .reading-category ul { margin-left: 1.5rem; }
+        .reading-category li { margin-bottom: 0.5rem; font-size: 1rem; }
+
+        .article-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-container { padding: 1.5rem 1rem 2rem; }
+            .article-title { font-size: 1.75rem; }
+            .article-content { font-size: 1rem; line-height: 1.8; }
+            .article-content h2 { font-size: 1.25rem; }
+            .back-link-wrapper { padding: 1rem 1rem 0.5rem; }
+            .reading-section { padding: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .article-container { padding: 1rem 1rem 1.5rem; }
+            .article-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+            .article-summary { font-size: 1rem; }
+            .article-content { font-size: 0.95rem; line-height: 1.75; }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link-wrapper">
+        <a href="/articles/" class="back-link">返回文章列表</a>
+    </div>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-meta-top">
+                <span class="article-number">AssetPath 011</span>
+                <span class="article-tag">Framework</span>
+                <span class="meta-date">2026年6月27日 · 11分钟阅读</span>
+            </div>
+            <h1 class="article-title">税务居民为什么会影响跨境规划？</h1>
+            <p class="article-summary">很多人真正需要先确定的，不是公司，而是税务居民身份。</p>
+        </header>
+
+        <div class="article-content">
+
+            <p>在007到010的讨论里，税务居民身份这个变量反复出现。</p>
+
+            <p>选香港公司还是LLC，税务居民身份会影响结果。穿透征税是优势还是负担，税务居民身份会影响结果。香港属地原则能不能用，税务居民身份会影响结果。</p>
+
+            <p>它不是众多变量中的一个。它更像是一个总开关。</p>
+
+            <p>很多人在规划跨境架构时，先确定了公司结构，再研究海外账户，最后才回过头来问：我的税务居民身份是什么？这个顺序，往往会在后期制造不必要的复杂度。</p>
+
+            <p>真正的问题不是税务居民身份"怎么算"，而是：它为什么是跨境规划里最先需要确认的变量。</p>
+
+            <h2>一、税务居民身份是什么</h2>
+
+            <p>很多人把税务居民理解成"我在哪里生活"。这个理解方向大致正确，但远不完整。</p>
+
+            <p>税务居民身份，是一个国家认定"你应该向它纳税"的法律依据。每个国家都有自己的认定规则，但大多数围绕以下几个核心因素：</p>
+
+            <ul>
+                <li>在该国居住的天数（最常见的是183天规则）</li>
+                <li>永久住所或惯常居所是否在该国</li>
+                <li>经济利益的重心是否在该国</li>
+                <li>家庭成员是否在该国</li>
+            </ul>
+
+            <p>这里有一个很多人没有意识到的关键点：税务居民身份和护照国籍是两件完全不同的事。你持有中国护照，不代表你一定是中国税务居民。你拿到了泰国长期签证，也不代表你自动成为泰国税务居民。</p>
+
+            <p>身份证件决定你是哪国公民。税务居民身份决定你向哪个国家负有纳税义务。两者可以相同，也可以不同，取决于你的实际生活方式和各国的认定规则。</p>
+
+            <h2>二、为什么税务居民身份能影响这么多事情</h2>
+
+            <p>很多人第一次接触税务居民身份时，会觉得它只是税务问题。实际上，它更像整个跨境规划的信息入口。</p>
+
+            <p>因为几乎所有重要决策，都会先问同一个问题：你的税务居民身份是什么？</p>
+
+            <ul>
+                <li>公司利润如何纳税</li>
+                <li>海外账户如何申报</li>
+                <li>CRS信息交换到哪里</li>
+                <li>全球收入是否需要申报</li>
+                <li>股息如何处理</li>
+                <li>遗产税是否可能产生影响</li>
+            </ul>
+
+            <p>这些问题的答案，都不是从公司注册地开始，而是从税务居民身份开始。这就是为什么它是总开关，而不是众多变量中的一个。</p>
+
+            <div style="background:#F9FAFB;border-radius:8px;padding:2rem;margin:2rem 0;text-align:center;">
+                <div style="display:inline-block;background:#0EA5E9;color:#fff;font-weight:600;font-size:1rem;padding:0.5rem 1.5rem;border-radius:4px;margin-bottom:1rem;">税务居民身份</div>
+                <div style="width:1px;height:1.5rem;background:#D1D5DB;margin:0 auto;"></div>
+                <div style="width:60%;height:1px;background:#D1D5DB;margin:0 auto;"></div>
+                <div style="display:flex;justify-content:center;gap:0;margin-top:0;flex-wrap:wrap;">
+                    <div style="display:flex;flex-direction:column;align-items:center;padding:0 1rem;">
+                        <div style="width:1px;height:1.25rem;background:#D1D5DB;"></div>
+                        <div style="background:#fff;border:1px solid #E5E7EB;border-radius:4px;padding:0.4rem 0.9rem;font-size:0.95rem;color:#374151;margin-top:0;">公司结构</div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;padding:0 1rem;">
+                        <div style="width:1px;height:1.25rem;background:#D1D5DB;"></div>
+                        <div style="background:#fff;border:1px solid #E5E7EB;border-radius:4px;padding:0.4rem 0.9rem;font-size:0.95rem;color:#374151;">海外账户</div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;padding:0 1rem;">
+                        <div style="width:1px;height:1.25rem;background:#D1D5DB;"></div>
+                        <div style="background:#fff;border:1px solid #E5E7EB;border-radius:4px;padding:0.4rem 0.9rem;font-size:0.95rem;color:#374151;">CRS申报</div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;padding:0 1rem;">
+                        <div style="width:1px;height:1.25rem;background:#D1D5DB;"></div>
+                        <div style="background:#fff;border:1px solid #E5E7EB;border-radius:4px;padding:0.4rem 0.9rem;font-size:0.95rem;color:#374151;">资产配置</div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;padding:0 1rem;">
+                        <div style="width:1px;height:1.25rem;background:#D1D5DB;"></div>
+                        <div style="background:#fff;border:1px solid #E5E7EB;border-radius:4px;padding:0.4rem 0.9rem;font-size:0.95rem;color:#374151;">第二身份</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>理解了这一点，再来看税务居民身份的具体逻辑，会清晰很多。</p>
+
+            <h3>全球征税的两种逻辑</h3>
+
+            <p>世界上主要的所得税制度，大致可以分成两种核心逻辑。</p>
+
+            <p>大多数国家采用属地原则：只对发生在本国境内的收入征税。你在其他国家赚的钱，理论上不在它的征税范围内。香港是典型的属地原则，这也是香港公司在某些情况下具有税务优势的根本原因。</p>
+
+            <p>少数国家采用属人原则：无论收入发生在哪里，只要你是该国税务居民，所有全球收入都需要向它申报。美国是最典型的例子。不同国家的具体规则并不完全相同，但这两种逻辑的差异，会产生截然不同的后果。</p>
+
+            <p>如果你是属地原则国家的税务居民，海外公司收入和海外投资收益，可能不需要在居住国申报。如果你是属人原则国家的税务居民，无论公司注册在哪里、收入发生在哪里，都可能需要向该国申报全球收入。</p>
+
+            <p>所以，同样注册一家香港公司，同样是非香港来源收入，A和B面对的税务结果可能完全不同——不是因为公司结构不同，而是因为税务居民身份不同。</p>
+
+            <p>很多人以为，公司决定税。实际上，在很多情况下，是税务居民身份决定公司对你意味着什么。</p>
+
+            <h2>三、税务居民身份如何影响具体决策</h2>
+
+            <h3>影响公司结构的选择</h3>
+
+            <p>LLC的穿透征税，在某些税务居民身份下是优势，在另一些是负担。如果你是一个采用属人原则国家的税务居民，LLC的公司利润穿透到你的个人收入后，会直接触发你在该国的纳税义务。你不是在选择一个"更好的公司"，而是在为自己创造一个额外的申报义务。</p>
+
+            <p>香港公司的属地原则税务优势，同样受到税务居民身份的制约。如果你的税务居民所在国要求申报全球收入，香港公司的低税率，未必能带来你预期的税务效果。</p>
+
+            <h3>影响海外账户和资产配置</h3>
+
+            <p>CRS（共同申报准则）的核心机制，是金融机构向账户持有人的税务居民所在国自动交换信息。你在哪里开户是次要的，你是哪里的税务居民才是决定信息流向的关键变量。</p>
+
+            <p>这意味着，海外账户的规划，必须建立在税务居民身份已经清楚的前提下。不知道自己的税务居民身份，就无法判断CRS会把哪些信息交换到哪里，也无法判断海外资产配置在合规层面意味着什么。</p>
+
+            <h3>影响第二身份的规划逻辑</h3>
+
+            <p>很多人申请第二身份，是希望通过改变税务居民身份来优化整体规划。这个逻辑在某些情况下成立，但它的前提是：你真正理解改变税务居民身份意味着什么，以及原有税务居民国如何处理你的"离开"。</p>
+
+            <p>不同国家对税务居民身份的"退出"有不同的规则。有些国家会在你离开后继续追溯一段时间，有些国家有退出税，有些国家则相对简单。第二身份的价值，取决于它能否真正改变你的税务居民身份，以及改变的代价是什么。</p>
+
+            <h2>四、最常见的误解</h2>
+
+            <p>关于税务居民身份，有几个在跨境规划中反复出现的误解，值得单独说清楚。</p>
+
+            <p>第一个误解：只要不在原来的国家住，就自动失去原税务居民身份。这个逻辑在很多国家并不成立。离开一个国家，和在税务上"退出"这个国家，是两件不同的事。很多国家有明确的认定规则，简单地搬离并不等于税务上的切断。</p>
+
+            <p>第二个误解：注册了海外公司，税务居民身份就自动转移了。公司的注册地和个人的税务居民身份是两个独立的变量。一家香港公司的存在，不会改变你作为个人的税务居民身份认定。</p>
+
+            <p>第三个误解：数字游民没有税务居民身份。在多个国家短暂居住、没有固定住所，确实可能让税务居民身份的认定变得复杂。但"复杂"不等于"没有"。在很多情况下，原籍国仍然会主张对你的税务居民身份。这个问题越早厘清越好。</p>
+
+            <div style="margin: 2.5rem 0 0 0; border-top: 1px solid var(--border); padding-top: 2rem; text-align: center;">
+                <h2 style="font-size: 1.25rem; margin: 0; color: #0EA5E9;">AssetPath Framework</h2>
+            </div>
+
+            <p style="margin-top: 2rem;">税务居民身份不是税务规划的最后一步，而是跨境规划的第一步。它决定了公司结构、海外账户、资产配置对你而言意味着什么。</p>
+
+            <p>在开始规划之前，可以先把下面这些问题放进判断框架：</p>
+
+            <ul>
+                <li>我目前是哪个国家的税务居民？</li>
+                <li>这个国家采用属地原则还是属人原则？</li>
+                <li>我的实际生活方式，是否可能触发多个国家的税务居民认定？</li>
+                <li>如果我计划改变税务居民身份，原有国家如何处理这个"退出"？</li>
+                <li>我的税务居民身份，与我计划的公司结构和资金路径是否匹配？</li>
+            </ul>
+
+            <p>当这些问题有了初步答案，后续的公司选择、账户规划和资产配置，才能建立在一个稳定的基础上。</p>
+
+            <p>很多人先选择公司，再研究税务居民身份。AssetPath 建议反过来。</p>
+
+            <p>公司可以以后再改。税务居民身份，决定了你怎么看公司。</p>
+
+            <p>税务居民身份，是整个跨境规划的总开关。它不仅影响税务，更决定了公司、账户和资产配置对你的真正意义。</p>
+
+            <div class="reading-section">
+                <h3>这些内容也许能帮到你</h3>
+
+                <div class="reading-category">
+                    <h4>税务与身份</h4>
+                    <ul>
+                        <li>CRS到底交换了哪些信息？</li>
+                        <li>全球征税，到底征的是什么？</li>
+                        <li>遗产税什么时候开始需要考虑？</li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>公司与商业</h4>
+                    <ul>
+                        <li>为什么资金流动路径会影响公司结构？</li>
+                        <li>什么时候适合注册美国LLC？</li>
+                        <li>什么时候香港公司仍然是更好的选择？</li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>长期规划</h4>
+                    <ul>
+                        <li>第二身份如何影响长期资产规划？</li>
+                        <li>海外账户应该如何规划？</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid #E5E7EB;">
+            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">
+                ← 返回文章列表
+            </a>
+            <p style="margin-top:2rem;font-size:1rem;color:#0EA5E9;font-weight:600;">Stop Researching. Start Deciding.</p>
+        </div>
+    </article>
+
+    <footer class="article-footer">
+        <p>© 2024 AssetPath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
