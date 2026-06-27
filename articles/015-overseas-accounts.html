@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>海外账户应该如何规划？ - AssetPath 资产蓝图</title>
+    <meta name="description" content="海外账户应该如何规划？账户不是存钱的地方，而是资金流动的基础设施。从资金路径理解账户体系的设计逻辑。">
+    <meta name="author" content="AssetPath">
+    <meta property="og:title" content="海外账户应该如何规划？">
+    <meta property="og:description" content="海外账户应该如何规划？账户不是存钱的地方，而是资金流动的基础设施。从资金路径理解账户体系的设计逻辑。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://assetpath.app/articles/015-overseas-accounts.html">
+    <meta property="og:site_name" content="AssetPath">
+    <meta property="article:published_time" content="2026-06-27">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #0EA5E9;
+            --primary-dark: #0284C7;
+            --primary-light: #E0F2FE;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --border: #E5E7EB;
+            --bg-light: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .back-link-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover { color: var(--primary-dark); }
+        .back-link::before { content: "←"; margin-right: 0.5rem; font-size: 1.1rem; }
+
+        .article-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        .article-header { margin-bottom: 2.5rem; }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .article-number {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-date { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .article-title {
+            font-size: 2.125rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-summary {
+            font-size: 1.125rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-primary);
+        }
+
+        .article-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-content p:last-child { margin-bottom: 0; }
+
+        .article-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li { margin-bottom: 0.5rem; }
+
+        .flow-diagram {
+            background: #F9FAFB;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        .flow-diagram .node {
+            color: var(--text-primary);
+            font-weight: 500;
+            padding: 0.4rem 0;
+            text-align: center;
+        }
+
+        .flow-diagram .node-highlight {
+            color: var(--primary);
+            font-weight: 600;
+            padding: 0.4rem 0;
+            text-align: center;
+        }
+
+        .flow-diagram .node-sub {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            padding: 0 0 0.4rem 0;
+            text-align: center;
+        }
+
+        .flow-arrow {
+            color: var(--text-tertiary);
+            font-size: 1rem;
+            line-height: 1.2;
+            padding: 0.1rem 0;
+            text-align: center;
+        }
+
+        .reading-section {
+            background: #F9FAFB;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2.5rem;
+        }
+
+        .reading-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .reading-category { margin-bottom: 1.5rem; }
+
+        .reading-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .reading-category ul { margin-left: 1.5rem; }
+        .reading-category li { margin-bottom: 0.5rem; font-size: 1rem; }
+
+        .article-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-container { padding: 1.5rem 1rem 2rem; }
+            .article-title { font-size: 1.75rem; }
+            .article-content { font-size: 1rem; line-height: 1.8; }
+            .article-content h2 { font-size: 1.25rem; }
+            .back-link-wrapper { padding: 1rem 1rem 0.5rem; }
+            .reading-section { padding: 1.5rem; }
+            .flow-diagram { padding: 1rem 1.25rem; }
+        }
+
+        @media (max-width: 480px) {
+            .article-container { padding: 1rem 1rem 1.5rem; }
+            .article-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+            .article-summary { font-size: 1rem; }
+            .article-content { font-size: 0.95rem; line-height: 1.75; }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link-wrapper">
+        <a href="/articles/" class="back-link">返回文章列表</a>
+    </div>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-meta-top">
+                <span class="article-number">AssetPath 015</span>
+                <span class="article-tag">Framework</span>
+                <span class="meta-date">2026年6月27日 · 10分钟阅读</span>
+            </div>
+            <h1 class="article-title">海外账户应该如何规划？</h1>
+            <p class="article-summary">建立账户体系，而不是不断开户。</p>
+        </header>
+
+        <div class="article-content">
+
+            <p>很多人以为账户是存钱的地方。</p>
+
+            <p>实际上，账户是资金流动的基础设施。</p>
+
+            <p>这个区别，决定了你怎么规划账户。如果只是存钱，你关心的是安全。如果把账户看成基础设施，你关心的是整个系统如何运转——哪个节点负责什么功能，节点之间资金如何流动，整个路径是否顺畅，任何一个节点出问题时，系统是否还能运转。</p>
+
+            <p>很多人拥有多个海外账户，但没有账户体系。它们之间的资金路径没有设计，每个账户用得都不充分，而一旦某个账户出现问题，整个资金流就卡住了。</p>
+
+            <h2>一、先画资金路径，再选账户</h2>
+
+            <p>账户规划的起点，不是哪家银行更好，而是你的资金需要走一条什么路径。</p>
+
+            <p>一条典型的跨境资金路径，大致是这样的：</p>
+
+            <div class="flow-diagram">
+                <div class="node">客户付款</div>
+                <span class="flow-arrow">↓</span>
+                <div class="node-highlight">收款账户</div>
+                <div class="node-sub">Stripe / PayPal / 直接转账</div>
+                <span class="flow-arrow">↓</span>
+                <div class="node-highlight">结算账户</div>
+                <div class="node-sub">多币种转换 / 资金调度</div>
+                <span class="flow-arrow">↓</span>
+                <div class="node-highlight">储蓄 / 投资账户</div>
+                <div class="node-sub">香港银行 / IBKR</div>
+                <span class="flow-arrow">↓</span>
+                <div class="node">个人使用</div>
+            </div>
+
+            <p>这条路径上，每一个节点都有它的功能，也有它的局限。设计账户体系，就是在确认：每个节点由哪个账户承担，节点之间的资金能否顺畅流动，以及任何一个节点失效时，整个路径是否还能运转。</p>
+
+            <p>在这个框架下，选择哪家银行是最后才需要回答的问题，而不是第一个。</p>
+
+            <h2>二、每个账户只解决一个问题</h2>
+
+            <p>很多人希望找到一个"最好的账户"，能同时满足收款、储蓄、投资的所有需求。这个账户不存在。每一类账户，都是为了解决特定问题而设计的，它的优势和局限同样清晰。</p>
+
+            <p>收款和结算，是跨境金融平台的强项。Airwallex、Wise在多币种转换、低手续费跨境转账上的体验，传统银行做不到。但它们不是银行，没有存款保险，不适合长期大额存放，也不是所有金融机构都认可它们作为"银行账户"的凭证。</p>
+
+            <p>稳定性和可信度，是传统银行的强项。香港、新加坡的传统银行账户，在国际商业往来中的认可度更高，大额转账更顺畅，也有存款保险覆盖。但开户门槛越来越高，KYC要求越来越严，小型企业的开户成功率在下降。</p>
+
+            <p>资产配置，是券商账户的定位。Interactive Brokers等国际券商支持全球市场的多种资产类别，是很多跨境投资者的核心投资节点。但它不是银行账户，不适合用来做日常收付，也不应该把它当成储蓄账户使用。</p>
+
+            <p>理解每个账户解决什么问题、不解决什么问题，比知道哪家"最好"更重要。</p>
+
+            <h2>三、账户体系最容易被忽视的风险</h2>
+
+            <p>很多人在规划账户时，只想到了"如何开"，没有想到"如果关了怎么办"。</p>
+
+            <p>这是账户体系设计里最容易被忽视的风险。</p>
+
+            <p>金融机构关闭账户，不一定是因为你做错了什么。政策变化、KYC重新审核、账户长期不活跃、资金来源说明不清晰，都可能触发账户被限制或关闭。这件事本身不可预测，但它的后果可以提前设计。</p>
+
+            <p>如果你所有的收款能力都依赖一个账户，这个账户一旦被关闭，公司现金流可能立刻中断。如果你的投资资产全部集中在一个券商，这个券商出现问题时，你的处理选项会非常有限。</p>
+
+            <p>一套有韧性的账户体系，不是账户越多越好，而是关键功能有备份。收款至少有两个渠道可以接收资金，资产不要集中在单一机构，每个账户的资金余额不要超过它应该承担的功能。</p>
+
+            <h2>四、税务合规是账户体系的隐形边界</h2>
+
+            <p>账户体系的设计，不能脱离<a href="/articles/011-tax-residency.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">税务居民身份</a>单独讨论。</p>
+
+            <p>你的税务居民所在国，决定了你的海外账户信息会通过<a href="/articles/012-crs.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">CRS</a>流向哪里，决定了这些账户产生的收入是否需要申报，也决定了某些账户结构对你而言的合规边界在哪里。</p>
+
+            <p>税务合规不是建立账户体系之后才需要考虑的问题。它是账户体系设计的隐形边界：哪些账户结构在你的税务框架内是清晰的，哪些会带来额外的复杂度，这些问题应该在账户规划阶段就想清楚。</p>
+
+            <p>一套在税务上处理清晰的账户体系，不只是减少了合规风险，更重要的是让整个体系可以长期稳定运转，而不是每隔一段时间就因为税务问题需要重新调整。</p>
+
+            <div style="margin: 2.5rem 0 0 0; border-top: 1px solid var(--border); padding-top: 2rem; text-align: center;">
+                <h2 style="font-size: 1.25rem; margin: 0; color: #0EA5E9;">AssetPath Framework</h2>
+            </div>
+
+            <p style="margin-top: 2rem;">账户规划的核心问题，不是选哪家银行，而是设计一套资金流动的基础设施。在开始之前，可以先回答下面几个问题：</p>
+
+            <ul>
+                <li>我的资金路径是什么？从客户付款到个人使用，中间经过哪些节点？</li>
+                <li>每个节点由哪个账户承担？它是否适合承担这个功能？</li>
+                <li>节点之间的资金流动是否顺畅？有没有卡点？</li>
+                <li>如果某个关键账户被关闭，我的备用方案是什么？</li>
+                <li>整个账户体系，在我的税务框架内是否处理清晰？</li>
+            </ul>
+
+            <p>当这些问题有了初步答案，具体账户的选择通常也会自然清晰。</p>
+
+            <p>账户不是存钱的地方。账户是资金流动的基础设施。账户体系的本质，不是存钱，而是设计资金能否持续流动。</p>
+
+            <div class="reading-section">
+                <h3>这些内容也许能帮到你</h3>
+
+                <div class="reading-category">
+                    <h4>税务与身份</h4>
+                    <ul>
+                        <li><a href="/articles/011-tax-residency.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">税务居民为什么会影响跨境规划？</a></li>
+                        <li><a href="/articles/012-crs.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">CRS到底交换了哪些信息？</a></li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>公司与商业</h4>
+                    <ul>
+                        <li><a href="/articles/008-capital-flow.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">为什么资金流动路径会影响公司结构？</a></li>
+                        <li><a href="/articles/009-when-llc.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">什么时候适合注册美国LLC？</a></li>
+                        <li><a href="/articles/010-when-hk.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">什么时候香港公司仍然是更好的选择？</a></li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>全球资产</h4>
+                    <ul>
+                        <li>为什么越来越多人开始配置美元资产？</li>
+                        <li>跨境资产，为什么需要分散在不同国家？</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid #E5E7EB;">
+            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">
+                ← 返回文章列表
+            </a>
+            <p style="margin-top:2rem;font-size:1rem;color:#0EA5E9;font-weight:600;">Stop Researching. Start Deciding.</p>
+        </div>
+    </article>
+
+    <footer class="article-footer">
+        <p>© 2024 AssetPath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
