@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title>为什么资金流动路径会影响公司结构？- AssetPath 资产蓝图</title>
-    <meta name="description" content="公司只是资金流中的一个节点。三个资金流向，帮助建立更完整的公司结构判断框架。">
+    <meta name="description" content="为什么资金流动路径会影响公司结构？从收入、资产和个人提取三个流向，建立自己的公司结构判断框架。">
     <meta name="author" content="AssetPath">
     <meta property="og:title" content="为什么资金流动路径会影响公司结构？">
     <meta property="og:description" content="公司只是资金流中的一个节点。三个资金流向，帮助建立更完整的公司结构判断框架。">
@@ -145,26 +145,33 @@
             padding: 1.5rem 2rem;
             margin: 1.5rem 0;
             font-size: 1rem;
-            line-height: 2;
             color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
         }
 
         .flow-diagram .node {
             color: var(--text-primary);
             font-weight: 500;
+            padding: 0.4rem 0;
+            text-align: center;
         }
 
         .flow-diagram .highlight {
             color: var(--primary);
             font-weight: 600;
+            padding: 0.4rem 0;
+            text-align: center;
         }
 
         .flow-arrow {
-            display: block;
+            color: var(--text-tertiary);
+            font-size: 1rem;
+            line-height: 1.2;
+            padding: 0.1rem 0;
             text-align: center;
-            color: var(--border);
-            font-size: 1.2rem;
-            line-height: 1.5;
         }
 
         .reading-section {
@@ -273,9 +280,15 @@
 
             <h3>收入进来</h3>
 
-            <p>客户所在的市场，会影响收款体验。如果主要服务亚洲客户，香港公司的金融生态通常更成熟。如果主要服务欧美客户，美国LLC与Stripe、PayPal、Mercury的兼容性通常更高。</p>
+            <p>很多人以为这是税率问题。实际上，它更像是一个金融生态的兼容性问题。</p>
 
-            <p>这个流向的判断相对直接。但有一个容易被忽略的问题：三年后，客户结构是否可能发生变化？如果会，当初的选择是否还适用。</p>
+            <p>Stripe、PayPal、Mercury背后的审核逻辑，是围绕美国法律体系建立的。LLC是美国金融体系长期使用、长期理解的一种法律结构。审核人员熟悉它的法律形式、税务处理方式和合规要求。香港公司当然也是成熟、合法的公司结构，但它不是这套系统默认认识的结构。</p>
+
+            <p>这种"不熟悉"会转化成什么？更多的沟通成本、更长的审核周期、偶尔没有明确原因的拒绝。</p>
+
+            <p>所以，如果你的收入来源依赖这些平台，公司结构的选择可能比税率更重要。这是值得提前放进判断框架的一个变量。</p>
+
+            <p>另一个值得提前考虑的问题：三年后，客户结构是否可能发生变化？如果会，当初的选择是否还适用。</p>
 
             <h3>资产出去</h3>
 
@@ -283,19 +296,23 @@
 
             <p>很多人开公司，不只是为了收款，还想用公司账户进行投资或资产配置。这条路径，在不同公司结构下差异很大。</p>
 
-            <p>以美股投资为例。美国LLC在与美国金融机构对接时，通常摩擦更少。香港公司也可以，但对经营记录、业务情况等前置条件通常会有更多要求。</p>
+            <p>以美股投资为例。美国LLC在与美国金融机构对接时，摩擦通常更少。但原因不是规定，而是惯例。美国券商对LLC的法律结构、税务穿透方式非常熟悉。香港公司在法律形式上没有问题，但审核人员需要额外时间去理解它，这会转化成对经营记录、业务情况等前置条件更多的要求。</p>
 
-            <p>以多货币资金管理为例。Airwallex、Mercury等工具与香港公司和LLC的兼容程度，在实际操作层面存在差异。不同平台支持的国家、业务类型以及审核要求，也可能不同。</p>
+            <p>以多货币资金管理为例。Airwallex、Mercury等工具与香港公司和LLC的兼容程度，在实际操作层面存在差异。不同平台支持的国家、业务类型以及审核要求也可能不同。</p>
 
-            <p>在选择公司结构之前，可以先问自己：这笔钱，最终需要流向哪里？</p>
+            <p>所以，如果你的资产配置计划重心在美国金融体系，这一点可能值得在注册公司之前就放进判断框架，而不是注册完成后才开始研究。</p>
 
             <h3>个人提取</h3>
 
             <p>这是税务差异最集中的环节。</p>
 
-            <p>美国LLC的默认税务处理，是穿透征税。公司利润直接计入个人收入，不在公司层面单独纳税。香港公司通过股息向股东分红，涉及的是另一套逻辑。</p>
+            <p>很多人把这个问题理解成"哪个公司税率更低"。实际上，税率只是结果，真正决定结果的是两个变量叠加在一起：公司结构，以及你的税务居民身份。</p>
 
-            <p>这里有一个值得单独说的细节：同样注册LLC，不同税务居民身份的人，面对的税务结果可能完全不同。很多人在选公司的时候，只比较了公司注册地的税率。真正影响结果的，往往是公司结构和税务居民身份共同作用。</p>
+            <p>美国LLC的默认税务处理是穿透征税——公司利润直接计入个人收入，不在公司层面单独纳税。香港公司通过股息向股东分红，涉及的是另一套逻辑。</p>
+
+            <p>关键在这里：同样注册LLC，不同税务居民身份的人，最终面对的税务结果可能完全不同。穿透征税意味着公司收入算你的个人收入，如果你同时是某些国家的税务居民，这笔收入可能需要在两个地方申报。这不是不能解决的问题，但很多人在注册之前没有想到这一步。</p>
+
+            <p>所以，税务居民身份不是最后才确认的变量，而是应该最先确认的变量之一。在很多跨境规划里，它的优先级甚至高于公司注册地的选择。</p>
 
             <h2>三、公司，是结果，不是起点</h2>
 
@@ -305,11 +322,13 @@
 
             <p>提前把三个流向放在一起考虑，通常比事后调整公司结构，成本更低。</p>
 
+            <p>公司选择，本质上不是选择一个注册地。而是在选择未来资金流动的一条路径。</p>
+
             <p>公司结构只是结果。资金路径，才是真正的起点。</p>
 
-            <div style="margin: 2.5rem 0 2rem 0; padding-top: 2.5rem; border-top: 1px solid var(--border);"></div>
-
-            <h2 style="text-align: center; font-size: 1.25rem; margin: 0 0 1.5rem 0; color: #0EA5E9;">AssetPath Framework</h2>
+            <div style="margin: 2.5rem 0 2rem 0; border-top: 1px solid var(--border); padding-top: 2rem; text-align: center;">
+                <h2 style="font-size: 1.25rem; margin: 0; color: #0EA5E9;">AssetPath Framework</h2>
+            </div>
 
             <p>本文整理的是影响公司结构选择的三个资金流向维度。</p>
 
