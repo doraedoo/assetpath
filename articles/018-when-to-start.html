@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>什么时候应该开始全球资产配置？ - AssetPath 资产蓝图</title>
+    <meta name="description" content="什么时候应该开始全球资产配置？比金额更重要的是人生阶段。但更关键的是：拖延不是在等待更好的时机，而是在累积更高的调整成本。">
+    <meta name="author" content="AssetPath">
+    <meta property="og:title" content="什么时候应该开始全球资产配置？">
+    <meta property="og:description" content="什么时候应该开始全球资产配置？比金额更重要的是人生阶段。但更关键的是：拖延不是在等待更好的时机，而是在累积更高的调整成本。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://assetpath.app/articles/018-when-to-start.html">
+    <meta property="og:site_name" content="AssetPath">
+    <meta property="article:published_time" content="2026-06-27">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #0EA5E9;
+            --primary-dark: #0284C7;
+            --primary-light: #E0F2FE;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --border: #E5E7EB;
+            --bg-light: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .back-link-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover { color: var(--primary-dark); }
+        .back-link::before { content: "←"; margin-right: 0.5rem; font-size: 1.1rem; }
+
+        .article-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        .article-header { margin-bottom: 2.5rem; }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .article-number {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-date { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .article-title {
+            font-size: 2.125rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-summary {
+            font-size: 1.125rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-primary);
+        }
+
+        .article-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-content p:last-child { margin-bottom: 0; }
+
+        .article-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li { margin-bottom: 0.5rem; }
+
+        .reading-section {
+            background: #F9FAFB;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2.5rem;
+        }
+
+        .reading-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .reading-category { margin-bottom: 1.5rem; }
+
+        .reading-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .reading-category ul { margin-left: 1.5rem; }
+        .reading-category li { margin-bottom: 0.5rem; font-size: 1rem; }
+
+        .article-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-container { padding: 1.5rem 1rem 2rem; }
+            .article-title { font-size: 1.75rem; }
+            .article-content { font-size: 1rem; line-height: 1.8; }
+            .article-content h2 { font-size: 1.25rem; }
+            .back-link-wrapper { padding: 1rem 1rem 0.5rem; }
+            .reading-section { padding: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .article-container { padding: 1rem 1rem 1.5rem; }
+            .article-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+            .article-summary { font-size: 1rem; }
+            .article-content { font-size: 0.95rem; line-height: 1.75; }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link-wrapper">
+        <a href="/articles/" class="back-link">返回文章列表</a>
+    </div>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-meta-top">
+                <span class="article-number">AssetPath 018</span>
+                <span class="article-tag">Framework</span>
+                <span class="meta-date">2026年6月27日 · 10分钟阅读</span>
+            </div>
+            <h1 class="article-title">什么时候应该开始全球资产配置？</h1>
+            <p class="article-summary">比金额更重要的，是人生阶段。</p>
+        </header>
+
+        <div class="article-content">
+
+            <p>很多人以为全球资产配置是资产达到某个金额之后才需要考虑的事。</p>
+
+            <p>实际上，触发全球资产配置需求的，不是金额，而是结构错配。</p>
+
+            <p>结构错配，是指你的生活、收入、账户已经跨越了不同的制度框架，但你的资产结构、税务安排和合规体系还没有跟上。这种错配在早期是隐性的，不会立刻产生损失，但它持续累积调整成本。当你最终意识到需要处理时，往往比早期规划付出更多。</p>
+
+            <p>结构错配通常以四种形式出现，而且它们是递进的——前一种错配，往往会触发下一种。</p>
+
+            <h2>一、第一层错配：资产已经跨境，税务结构还没跟上</h2>
+
+            <p>这是结构错配的起点，也是最常见的形式。收入开始以美元进入海外账户，但<a href="/articles/011-tax-residency.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">税务居民身份</a>还没有明确，公司结构还没有和资金路径对齐，申报义务还没有理清楚。</p>
+
+            <p>这个错配在前期通常感受不到。账户正常运转，收入正常进来，一切看起来都好。但<a href="/articles/012-crs.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">CRS</a>的信息交换在后台持续发生，税务机关在积累信息。当某个时间点触发审查，过去几年未申报的海外收入会同时出现在账面上，调整成本远高于当初就做好规划的成本。</p>
+
+            <p>资产跨境的速度，通常快于税务结构调整的速度。第一层错配，制造了第二层错配的条件。</p>
+
+            <h2>二、第二层错配：账户已经开了，但信息流向了错误的地方</h2>
+
+            <p>税务结构没有对齐，直接导致账户信息的流向出现问题。当<a href="/articles/011-tax-residency.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">税务居民身份</a>没有明确，金融机构收集的税务居民信息可能不准确，CRS把账户信息交换到一个你没有预期、也没有准备好申报的地方。</p>
+
+            <p>正如<a href="/articles/012-crs.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">《CRS到底交换了哪些信息？》</a>中讨论的，<strong>决定信息流向的不是账户在哪里开，而是税务居民身份在哪里。</strong>账户 × 国家 × 税务居民身份三个变量需要同时对齐。当第一层的税务错配存在，第二层的信息流向错配几乎不可避免。</p>
+
+            <h2>三、第三层错配：货币已经分散，但制度框架还是单一的</h2>
+
+            <p>当前两层错配没有被处理，很多人会尝试从货币层面入手——先做货币分散，把资产配置到不同币种。但如<a href="/articles/016-usd-assets.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">《为什么越来越多人开始配置美元资产？》</a>中提到的，货币多元化是结构对齐，不是方向押注。</p>
+
+            <p>如果货币分散了，但制度框架还是单一的，货币层面的分散并没有真正降低制度风险。美元资产有了，但全部集中在同一个法律框架下，<a href="/articles/017-asset-diversification.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">制度层面的风险</a>依然集中。这是货币错配和制度错配叠加的结果。</p>
+
+            <h2>四、第四层错配：规模还小，但已经触发了结构性门槛</h2>
+
+            <p>前三层错配累积的结果，是即使资产规模还不大，也已经触发了一系列结构性门槛。</p>
+
+            <p>非美国人在美国持有超过6万美元的资产，就已经进入美国遗产税的适用范围。<a href="/articles/012-crs.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">CRS</a>不设资产规模门槛，只要账户存在就触发信息交换。<a href="/articles/013-global-tax.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">全球征税</a>的申报义务，在收入产生的第一天就存在。</p>
+
+            <p>规模小，不代表结构错配不存在。它只是意味着错配还没有被注意到。</p>
+
+            <h2>五、拖延的真实代价</h2>
+
+            <p>很多人的全球资产配置计划，停留在"等一等"的状态。等收入再高一点，等资产再多一点，等情况更明朗一点。</p>
+
+            <p>但拖延不是在等待更好的时机。它是在累积更高的调整成本。</p>
+
+            <p>公司结构调整，需要重新注册、重新开户、历史资金的处理，每一步都有时间和费用成本。税务结构的事后调整，涉及过往未申报记录的处理，往往比提前规划复杂得多。账户体系的重建，意味着在新账户建立之前，现有的资金流动可能会中断。</p>
+
+            <p>早期的规划成本，通常远低于事后调整的代价。不是因为早期的决定一定正确，而是因为早期的调整空间更大，代价更低。</p>
+
+            <p>这也是为什么，开始的时机不是资产达到某个金额，而是冲突开始出现的时候。冲突越早识别，处理越从容。</p>
+
+            <div style="margin: 2.5rem 0 0 0; border-top: 1px solid var(--border); padding-top: 2rem; text-align: center;">
+                <h2 style="font-size: 1.25rem; margin: 0; color: #0EA5E9;">AssetPath Framework</h2>
+            </div>
+
+            <p style="margin-top: 2rem;">全球资产配置应该何时开始，核心判断只有一个：<strong>你是否已经进入结构错配状态？</strong></p>
+
+            <p>四个递进层级，任何一层出现错配，后续层级的错配几乎不可避免：</p>
+
+            <ul>
+                <li><strong>第一层：</strong>资产跨境了，但税务结构还没对齐 → 已经在累积调整成本</li>
+                <li><strong>第二层：</strong>账户已开，但信息在流向没有准备好申报的地方 → 错配在后台放大</li>
+                <li><strong>第三层：</strong>货币分散了，但制度框架还是单一的 → 分散只解决了表面问题</li>
+                <li><strong>第四层：</strong>规模还小，但已经触发了结构性门槛 → 等到规模大了再处理，成本更高</li>
+            </ul>
+
+            <p>如果上面任何一层的答案是"是"，开始规划的时机就已经到了。</p>
+
+            <p>拖延不是在等待更好的时机。每推迟一天，错配就多累积一天。全球资产配置开始的最佳时机，是结构错配出现的那一刻，而不是资产达到某个数字的那一天。</p>
+
+            <div class="reading-section">
+                <h3>这些内容也许能帮到你</h3>
+
+                <div class="reading-category">
+                    <h4>全球资产</h4>
+                    <ul>
+                        <li><a href="/articles/015-overseas-accounts.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">海外账户应该如何规划？</a></li>
+                        <li><a href="/articles/016-usd-assets.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">为什么越来越多人开始配置美元资产？</a></li>
+                        <li><a href="/articles/017-asset-diversification.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">跨境资产，为什么需要分散在不同国家？</a></li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>税务与身份</h4>
+                    <ul>
+                        <li><a href="/articles/011-tax-residency.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">税务居民为什么会影响跨境规划？</a></li>
+                        <li><a href="/articles/012-crs.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">CRS到底交换了哪些信息？</a></li>
+                        <li><a href="/articles/013-global-tax.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">全球征税，到底征的是什么？</a></li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>长期规划</h4>
+                    <ul>
+                        <li><a href="/articles/019-second-identity.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">第二身份如何影响长期资产规划？</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid #E5E7EB;">
+            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">
+                ← 返回文章列表
+            </a>
+            <p style="margin-top:2rem;font-size:1rem;color:#0EA5E9;font-weight:600;">Stop Researching. Start Deciding.</p>
+        </div>
+    </article>
+
+    <footer class="article-footer">
+        <p>© 2024 AssetPath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
