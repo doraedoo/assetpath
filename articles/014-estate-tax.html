@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>遗产税什么时候开始需要考虑？ - AssetPath 资产蓝图</title>
+    <meta name="description" content="遗产税什么时候开始需要考虑？很多人忽略的不是遗产税本身，而是资产所在地决定了哪个国家的遗产税规则适用于你。">
+    <meta name="author" content="AssetPath">
+    <meta property="og:title" content="遗产税什么时候开始需要考虑？">
+    <meta property="og:description" content="遗产税什么时候开始需要考虑？很多人忽略的不是遗产税本身，而是资产所在地决定了哪个国家的遗产税规则适用于你。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://assetpath.app/articles/014-estate-tax.html">
+    <meta property="og:site_name" content="AssetPath">
+    <meta property="article:published_time" content="2026-06-27">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #0EA5E9;
+            --primary-dark: #0284C7;
+            --primary-light: #E0F2FE;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --border: #E5E7EB;
+            --bg-light: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .back-link-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover { color: var(--primary-dark); }
+        .back-link::before { content: "←"; margin-right: 0.5rem; font-size: 1.1rem; }
+
+        .article-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        .article-header { margin-bottom: 2.5rem; }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .article-number {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-date { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .article-title {
+            font-size: 2.125rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-summary {
+            font-size: 1.125rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-primary);
+        }
+
+        .article-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-content p:last-child { margin-bottom: 0; }
+
+        .article-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li { margin-bottom: 0.5rem; }
+
+        .reading-section {
+            background: #F9FAFB;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2.5rem;
+        }
+
+        .reading-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .reading-category { margin-bottom: 1.5rem; }
+
+        .reading-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .reading-category ul { margin-left: 1.5rem; }
+        .reading-category li { margin-bottom: 0.5rem; font-size: 1rem; }
+
+        .article-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-container { padding: 1.5rem 1rem 2rem; }
+            .article-title { font-size: 1.75rem; }
+            .article-content { font-size: 1rem; line-height: 1.8; }
+            .article-content h2 { font-size: 1.25rem; }
+            .back-link-wrapper { padding: 1rem 1rem 0.5rem; }
+            .reading-section { padding: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .article-container { padding: 1rem 1rem 1.5rem; }
+            .article-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+            .article-summary { font-size: 1rem; }
+            .article-content { font-size: 0.95rem; line-height: 1.75; }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link-wrapper">
+        <a href="/articles/" class="back-link">返回文章列表</a>
+    </div>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-meta-top">
+                <span class="article-number">AssetPath 014</span>
+                <span class="article-tag">Framework</span>
+                <span class="meta-date">2026年6月27日 · 10分钟阅读</span>
+            </div>
+            <h1 class="article-title">遗产税什么时候开始需要考虑？</h1>
+            <p class="article-summary">很多人忽略的，不是遗产税，而是资产所在地。</p>
+        </header>
+
+        <div class="article-content">
+
+            <p>很多人以为遗产税是生命最后阶段才需要考虑的问题。</p>
+
+            <p>实际上，它从你购买第一项海外资产时，就已经开始影响你的选择。</p>
+
+            <p>因为决定遗产税的，不只是多少资产，还有资产在哪里。每一项跨境资产的配置决定，同时也是一个遗产税结构的决定。只是大多数人在买入的那一刻，没有把这个变量放进判断框架。</p>
+
+            <h2>一、遗产税为什么比很多人想象的更复杂</h2>
+
+            <p>很多人以为遗产税是一个统一的规则：超过某个金额，就需要缴税。实际上，遗产税涉及两套完全不同的征税逻辑，而这两套逻辑可能同时对你生效。</p>
+
+            <p>第一套逻辑，基于你的身份。部分国家对本国税务居民或公民的全球遗产主张征税权，无论资产放在哪里。美国是最典型的例子：美国公民和绿卡持有人，即使在全球任何地方持有资产，都可能面对美国联邦遗产税的适用。</p>
+
+            <p>第二套逻辑，基于资产所在地。很多国家不管你是哪里的居民，只要资产位于该国境内，就对该资产主张遗产税征税权。美国同样适用这套逻辑：非美国人在美国持有的房产、股票等资产，同样可能面对美国遗产税，而且免税额度远低于美国公民。</p>
+
+            <p>这两套逻辑叠加，意味着：你可能既因为自己的身份，又因为资产所在地，同时面对来自不同国家的遗产税主张。</p>
+
+            <p>遗产税不是一个数字问题。它首先是一个结构问题。</p>
+
+            <h2>二、资产所在地的影响——一个被严重低估的变量</h2>
+
+            <p>很多人在配置海外资产时，重点考虑的是收益率、流动性和货币风险。资产所在地对遗产税的影响，通常不在优先考虑的范围内。</p>
+
+            <p>但这个变量的影响可能非常显著。</p>
+
+            <p>以美国为例。非美国人（非美国公民、非绿卡持有人）在美国境内持有的资产，被称为"美国境内资产"（US Situs Assets），包括：美国房产、美国上市公司股票、美国银行存款（某些情况下）。</p>
+
+            <p>对于非美国人，美国联邦遗产税的免税额仅为6万美元。超过这个金额的部分，适用高达40%的遗产税税率。相比之下，美国公民和绿卡持有人的联邦遗产税免税额超过1000万美元（2024年数据，且每年调整）。</p>
+
+            <p>这意味着什么？一个持有价值100万美元美国股票的非美国投资者，在去世时，其继承人可能面对超过37万美元的美国遗产税。这不是一个假设性的风险，而是真实存在于美国税法中的规则，只是很多人在买入美股时没有把这个变量放进判断框架。</p>
+
+            <p>美国只是最典型的例子。真正值得记住的，不是美国，而是判断逻辑。资产在哪个国家，就进入哪个国家的规则。</p>
+
+            <h2>三、什么时候开始需要考虑</h2>
+
+            <p>遗产税不是资产超过某个金额才开始考虑的问题。更准确的触发条件，是以下几个变量的组合。</p>
+
+            <h3>变量一：你的身份</h3>
+
+            <p>如果你是美国公民或绿卡持有人，无论资产放在哪里，美国遗产税的框架都已经对你生效。这是很多人在申请绿卡时没有充分考虑的长期后果之一。</p>
+
+            <p>如果你是其他国家的公民，你的居住国是否对全球遗产征税，是首先需要确认的变量。</p>
+
+            <h3>变量二：资产所在地</h3>
+
+            <p>你在哪些国家持有资产，这些国家对非居民持有的境内资产是否征收遗产税，税率和免税额是多少。这些问题，应该在配置资产之前就放进判断框架，而不是资产已经持有之后再回头研究。</p>
+
+            <h3>变量三：资产持有结构</h3>
+
+            <p>同样是持有美国股票，通过个人账户直接持有，和通过离岸公司持有，面对的遗产税处理方式可能完全不同。个人直接持有的美国上市股票，属于美国境内资产，适用上述规则。通过非美国离岸公司间接持有的美国股票，由于持有人变成了公司而非个人，遗产税的适用方式会发生变化。</p>
+
+            <p>这不是说离岸公司结构一定更好，而是说持有结构本身是一个独立的变量，会直接影响遗产税的计算方式。</p>
+
+            <h3>变量四：家庭规划</h3>
+
+            <p>如果你有配偶、子女或其他需要考虑的继承人，不同国家对继承人身份的处理方式不同，婚姻状况和家庭结构也会影响遗产税的实际税负。这些变量，在做长期资产规划时都值得一起放进判断框架。</p>
+
+            <h2>四、遗产税规划真正解决的是什么</h2>
+
+            <p>很多人以为遗产税规划的目的是少交税。这个理解不完整。</p>
+
+            <p>真正的遗产规划，不是为了降低税。而是为了降低继承的不确定性。</p>
+
+            <p>很多跨境资产的遗产问题，真正麻烦的部分不是税单，而是法律程序。一个在多个国家持有资产的人，如果没有提前做好结构规划，继承人可能面对的是：在多个国家同时启动遗产处理程序，每个国家都有自己的继承法规、遗嘱认证要求和执行时间表。这个过程可能耗费数年，消耗的律师费和时间成本，有时候远超税务本身。</p>
+
+            <p>提前规划，是为了让传承过程尽可能清晰、可预测。不是为了逃避规则，而是为了在规则允许的范围内，做出对家人最友好的安排。</p>
+
+            <div style="margin: 2.5rem 0 0 0; border-top: 1px solid var(--border); padding-top: 2rem; text-align: center;">
+                <h2 style="font-size: 1.25rem; margin: 0; color: #0EA5E9;">AssetPath Framework</h2>
+            </div>
+
+            <p style="margin-top: 2rem;">遗产税不是一个金额问题，而是一个结构问题。在把它放进判断框架之前，可以先回答下面几个问题：</p>
+
+            <ul>
+                <li>我的身份（公民身份、居住国）是否触发了某个国家的全球遗产税主张？</li>
+                <li>我持有资产的国家，对非居民持有的境内资产是否征收遗产税？</li>
+                <li>我目前的资产持有结构，是个人直接持有还是通过公司间接持有？</li>
+                <li>我的家庭成员身份和居住情况，是否会影响遗产税的计算方式？</li>
+                <li>如果我明天去世，继承人需要在几个国家同时处理遗产问题？</li>
+            </ul>
+
+            <p>当这些问题有了初步答案，遗产税对你而言意味着什么，通常也会更容易判断。</p>
+
+            <p>遗产税真正需要开始考虑的时间，不是资产达到某个数字，而是资产开始跨越不同国家的时候。因为从那一天开始，你面对的就不再是一套规则，而是多套规则。</p>
+
+            <p>遗产税不是生命最后的问题。它是资产配置第一天的问题。</p>
+
+            <div class="reading-section">
+                <h3>这些内容也许能帮到你</h3>
+
+                <div class="reading-category">
+                    <h4>税务与身份</h4>
+                    <ul>
+                        <li><a href="/articles/011-tax-residency.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">税务居民为什么会影响跨境规划？</a></li>
+                        <li><a href="/articles/013-global-tax.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">全球征税，到底征的是什么？</a></li>
+                        <li><a href="/articles/012-crs.html" style="color:#374151;text-decoration:none;border-bottom:1px solid #E5E7EB;">CRS到底交换了哪些信息？</a></li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>全球资产</h4>
+                    <ul>
+                        <li>海外账户应该如何规划？</li>
+                        <li>跨境资产，为什么需要分散在不同国家？</li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>长期规划</h4>
+                    <ul>
+                        <li>第二身份如何影响长期资产规划？</li>
+                        <li>永居和国籍，到底有什么区别？</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid #E5E7EB;">
+            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">
+                ← 返回文章列表
+            </a>
+            <p style="margin-top:2rem;font-size:1rem;color:#0EA5E9;font-weight:600;">Stop Researching. Start Deciding.</p>
+        </div>
+    </article>
+
+    <footer class="article-footer">
+        <p>© 2024 AssetPath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
