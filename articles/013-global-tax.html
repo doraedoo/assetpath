@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>全球征税，到底征的是什么？ - AssetPath 资产蓝图</title>
+    <meta name="description" content="全球征税，到底征的是什么？全球征税并不等于全球所有收入都会重复纳税，理解机制才能理解边界。">
+    <meta name="author" content="AssetPath">
+    <meta property="og:title" content="全球征税，到底征的是什么？">
+    <meta property="og:description" content="全球征税，到底征的是什么？全球征税并不等于全球所有收入都会重复纳税，理解机制才能理解边界。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://assetpath.app/articles/013-global-tax.html">
+    <meta property="og:site_name" content="AssetPath">
+    <meta property="article:published_time" content="2026-06-27">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #0EA5E9;
+            --primary-dark: #0284C7;
+            --primary-light: #E0F2FE;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --border: #E5E7EB;
+            --bg-light: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .back-link-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem 0.5rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover { color: var(--primary-dark); }
+        .back-link::before { content: "←"; margin-right: 0.5rem; font-size: 1.1rem; }
+
+        .article-container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        .article-header { margin-bottom: 2.5rem; }
+
+        .article-meta-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .article-number {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .article-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-date { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .article-title {
+            font-size: 2.125rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-summary {
+            font-size: 1.125rem;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        .article-content {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text-primary);
+        }
+
+        .article-content h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--text-primary);
+        }
+
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-content p:last-child { margin-bottom: 0; }
+
+        .article-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content li { margin-bottom: 0.5rem; }
+
+        .reading-section {
+            background: #F9FAFB;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2.5rem;
+        }
+
+        .reading-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .reading-category { margin-bottom: 1.5rem; }
+
+        .reading-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .reading-category ul { margin-left: 1.5rem; }
+        .reading-category li { margin-bottom: 0.5rem; font-size: 1rem; }
+
+        .article-footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-container { padding: 1.5rem 1rem 2rem; }
+            .article-title { font-size: 1.75rem; }
+            .article-content { font-size: 1rem; line-height: 1.8; }
+            .article-content h2 { font-size: 1.25rem; }
+            .back-link-wrapper { padding: 1rem 1rem 0.5rem; }
+            .reading-section { padding: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .article-container { padding: 1rem 1rem 1.5rem; }
+            .article-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+            .article-summary { font-size: 1rem; }
+            .article-content { font-size: 0.95rem; line-height: 1.75; }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link-wrapper">
+        <a href="/articles/" class="back-link">返回文章列表</a>
+    </div>
+
+    <article class="article-container">
+        <header class="article-header">
+            <div class="article-meta-top">
+                <span class="article-number">AssetPath 013</span>
+                <span class="article-tag">Framework</span>
+                <span class="meta-date">2026年6月27日 · 10分钟阅读</span>
+            </div>
+            <h1 class="article-title">全球征税，到底征的是什么？</h1>
+            <p class="article-summary">全球征税，并不等于全球所有收入都会重复纳税。</p>
+        </header>
+
+        <div class="article-content">
+
+            <p>很多人一听到"全球征税"，第一反应是：我在海外赚的钱，还要回来交一次税？</p>
+
+            <p>如果你还没有确定自己的税务居民身份，建议先阅读<a href="/articles/011-tax-residency.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">《税务居民为什么会影响跨境规划？》</a>。因为全球征税的起点，并不是税率，而是税务居民身份。</p>
+
+            <p>这个担忧可以理解。但它建立在一个不完整的理解上。全球征税并不意味着所有收入被征两次。更值得先弄清楚的是：在什么情况下，哪些收入需要向哪个国家申报，以及申报之后的实际税负是多少。</p>
+
+            <p>这两件事，往往比"会不会被双重征税"更值得先想清楚。</p>
+
+            <h2>一、"全球征税"是什么意思</h2>
+
+            <p>很多人以为"全球征税"是一种特殊的税种或政策。实际上，它描述的是一种征税逻辑——某些国家对本国税务居民的全球收入主张征税权，而不只是对发生在本国境内的收入征税。</p>
+
+            <p>这种逻辑被称为属人原则，与大多数国家采用的属地原则形成对比。<a href="/articles/011-tax-residency.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">《税务居民为什么会影响跨境规划？》</a>已经讨论过这个区别。这里需要补充的是：即使一个国家采用属人原则，"全球征税"在实际操作中并不等于"无限制重复征税"。</p>
+
+            <p>原因在于，大多数情况下，还有另外两套规则同时在发挥作用：税收协定，以及境外税收抵免。</p>
+
+            <h2>二、税收协定：避免双重征税的基础设施</h2>
+
+            <p>很多人以为，只要在海外赚了钱，就会被两个国家同时征税。实际上，很多国家之间签订了税收协定（Double Tax Treaty），专门用来解决这个问题。</p>
+
+            <p>税收协定的核心机制是：两个国家协商好，对于特定类型的收入，谁有优先征税权，谁只能补充征税，谁完全不征税。它不是一份"免税承诺"，而是一套分配征税权的规则。</p>
+
+            <p>举一个具体的例子。假设你是A国税务居民，在B国赚取了股息收入。如果A国和B国之间有税收协定，协定可能规定：B国可以按照不超过某个税率预扣股息税，A国在征税时可以将B国已扣的税额抵免。最终结果是：你缴纳的总税额，大致等于两国较高税率一方的税负，而不是两者相加。</p>
+
+            <p>这就是为什么"全球征税"在现实中很少等于"双重征税"——税收协定的存在，让大多数情况下的实际税负保持在一个相对合理的范围内。</p>
+
+            <h2>三、境外税收抵免：另一层保护</h2>
+
+            <p>即使两个国家之间没有税收协定，很多采用属人原则的国家在本国税法中也提供境外税收抵免（Foreign Tax Credit）机制：你在海外已经缴纳的税款，可以用来抵减你在本国应缴的税额。</p>
+
+            <p>抵免的逻辑是：你在B国缴了税，A国在向你征税时，会先减去你已经在B国缴纳的部分。如果B国的税率高于A国，你可能不需要在A国补缴任何税款。如果A国税率更高，你只需要补缴差额部分。</p>
+
+            <p>这个机制的存在，意味着全球征税在大多数情况下产生的实际税负，是两国中较高税率那一方的水平，而不是两者叠加。</p>
+
+            <p>当然，这个机制有限制条件。不同国家的抵免规则、可抵免的收入类型、抵免上限的计算方式，都存在差异。这也是为什么同样面对"全球征税"，不同人的实际税负可能相差很大。</p>
+
+            <h2>四、申报义务 ≠ 纳税义务</h2>
+
+            <p>这是本文最值得单独说清楚的一个区别。</p>
+
+            <p>很多采用全球征税逻辑的国家，要求税务居民申报全球收入。但申报，不等于纳税。</p>
+
+            <p>申报的意思是：你需要告诉税务机关你有这笔收入。纳税的意思是：你需要就这笔收入缴税。这两件事，中间隔着税收协定、境外税收抵免、税务豁免，以及各种具体的计算规则。</p>
+
+            <p>很多人因为"需要申报"而感到恐慌，以为申报就等于双重税负。实际上，在申报之后，税务机关会根据你已经在其他国家缴纳的税款、适用的税收协定，计算你实际还需要缴纳多少。这个数字，往往远小于人们想象中的"双重税"。</p>
+
+            <p>申报义务本身不是问题。不申报，才是问题。</p>
+
+            <h2>五、全球征税 × 税务居民身份 × 收入类型</h2>
+
+            <p>全球征税的实际影响，是三个变量共同决定的结果。</p>
+
+            <p>第一个变量是税务居民身份。你是哪个国家的税务居民，决定了哪个国家对你的全球收入主张征税权。如果你的税务居民所在国采用属地原则，全球征税对你完全不适用。如果采用属人原则，才进入后续的判断。</p>
+
+            <p>第二个变量是收入类型。不同类型的收入，在税收协定和国内税法中的处理方式不同。工资收入、股息、利息、资本利得、租金收入，每一类都可能有不同的征税权分配规则和抵免机制。"全球征税"不是一个统一适用于所有收入的公式。</p>
+
+            <p>第三个变量是两国之间是否存在税收协定，以及协定的具体条款。有协定和没有协定，实际税负可能相差很大。即使都有协定，不同协定的条款也不尽相同。</p>
+
+            <p>三个变量共同决定：你面对的全球征税，实际税负是多少，以及申报之后需要缴纳什么。任何一个变量发生变化，结果都可能不同。</p>
+
+            <div style="margin: 2.5rem 0 0 0; border-top: 1px solid var(--border); padding-top: 2rem; text-align: center;">
+                <h2 style="font-size: 1.25rem; margin: 0; color: #0EA5E9;">AssetPath Framework</h2>
+            </div>
+
+            <p style="margin-top: 2rem;">全球征税，比"会不会交两次税"复杂得多。在放进判断框架之前，可以先回答下面几个问题：</p>
+
+            <ul>
+                <li>我的税务居民所在国，采用属地原则还是属人原则？</li>
+                <li>如果是属人原则，它和我持有资产或收入来源国之间，是否有税收协定？</li>
+                <li>我的主要收入类型，在两国税收协定中如何分配征税权？</li>
+                <li>我在海外已经缴纳的税款，是否可以在居住国申请抵免？</li>
+                <li>我有没有混淆申报义务和纳税义务？</li>
+            </ul>
+
+            <p>当这些问题有了初步答案，全球征税对你而言意味着什么，通常也会更容易判断。</p>
+
+            <p>全球征税不是一个税。它是一套规则，决定了不同国家如何分配对同一笔收入的征税权。规则决定结果，税率只是结果的一部分。</p>
+
+            <p>全球征税真正增加的，很多时候不是税负，而是透明度。税务机关开始能够看见以前看不见的信息——这和CRS的机制指向同一个方向——而申报义务，也随之产生。</p>
+
+            <div class="reading-section">
+                <h3>这些内容也许能帮到你</h3>
+
+                <div class="reading-category">
+                    <h4>税务与身份</h4>
+                    <ul>
+                        <li>税务居民为什么会影响跨境规划？</li>
+                        <li>CRS到底交换了哪些信息？</li>
+                        <li>遗产税什么时候开始需要考虑？</li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>全球资产</h4>
+                    <ul>
+                        <li>海外账户应该如何规划？</li>
+                        <li>跨境资产，为什么需要分散在不同国家？</li>
+                    </ul>
+                </div>
+
+                <div class="reading-category">
+                    <h4>长期规划</h4>
+                    <ul>
+                        <li>第二身份如何影响长期资产规划？</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid #E5E7EB;">
+            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">
+                ← 返回文章列表
+            </a>
+            <p style="margin-top:2rem;font-size:1rem;color:#0EA5E9;font-weight:600;">Stop Researching. Start Deciding.</p>
+        </div>
+    </article>
+
+    <footer class="article-footer">
+        <p>© 2024 AssetPath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
