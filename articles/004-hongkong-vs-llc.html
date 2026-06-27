@@ -3,365 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- SEO -->
     <title>香港公司还是美国LLC？你可能问错了问题 - AssetPath 资产蓝图</title>
-    <meta name="description" content="很多人花周研究公司对比，却没花一天思考资金路径。真正决定答案的，从来不是费用和税率。">
-    <meta name="keywords" content="香港公司,美国LLC,公司架构,跨境经营,资金流动">
+    <meta name="description" content="香港公司还是美国LLC？你可能问错了问题。真正决定答案的，从来不是注册费用，而是资金路径。">
     <meta name="author" content="AssetPath">
-    
-    <!-- Open Graph -->
     <meta property="og:title" content="香港公司还是美国LLC？你可能问错了问题">
-    <meta property="og:description" content="很多人花周研究公司对比，却没花一天思考资金路径。真正决定答案的，从来不是费用和税率。">
+    <meta property="og:description" content="香港公司还是美国LLC？你可能问错了问题。真正决定答案的，从来不是注册费用，而是资金路径。">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://assetpath.app/articles/004-hongkong-vs-llc.html">
     <meta property="og:site_name" content="AssetPath">
-    
-    <!-- Article Schema -->
     <meta property="article:published_time" content="2026-06-24">
-    <meta property="article:author" content="AssetPath">
-    <meta property="article:section" content="公司架构">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #0EA5E9;
-            --primary-dark: #0284C7;
-            --primary-light: #E0F2FE;
-            --text-primary: #111827;
-            --text-secondary: #6B7280;
-            --text-tertiary: #9CA3AF;
-            --border: #E5E7EB;
-            --bg-light: #FFFFFF;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-            color: var(--text-primary);
-            background: var(--bg-light);
-            line-height: 1.6;
-        }
-
-        .back-link-wrapper {
-            max-width: 820px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem 0.5rem;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .back-link:hover {
-            color: var(--primary-dark);
-        }
-
-        .back-link::before {
-            content: "←";
-            margin-right: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .article-container {
-            max-width: 820px;
-            margin: 0 auto;
-            padding: 2rem 2rem 3rem;
-        }
-
-        .article-header {
-            margin-bottom: 2.5rem;
-        }
-
-        .article-meta-top {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .article-number {
-            display: inline-block;
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .divider {
-            width: 1px;
-            height: 1rem;
-            background: var(--border);
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .meta-item::before {
-            content: "•";
-            margin-right: 0.5rem;
-            color: var(--border);
-        }
-
-        .meta-item:first-child::before {
-            display: none;
-        }
-
-        .article-title {
-            font-size: 2.125rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .article-summary {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .article-content {
-            font-size: 1.125rem;
-            line-height: 1.9;
-            color: var(--text-primary);
-            margin-bottom: 2rem;
-        }
-
-        .article-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .article-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        .article-content strong {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .article-navigation {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .nav-label {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .nav-articles {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .nav-article {
-            text-decoration: none;
-            padding: 1.5rem;
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            display: block;
-        }
-
-        .nav-article:hover {
-            border-color: var(--primary);
-            background: var(--primary-light);
-        }
-
-        .nav-article-direction {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-        }
-
-        .nav-article-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            line-height: 1.5;
-        }
-
-        .nav-article:hover .nav-article-title {
-            color: var(--primary);
-        }
-
-        .article-footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .footer-tagline {
-            font-size: 1rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .article-container {
-                padding: 1.5rem 1rem 2rem;
-            }
-
-            .article-title {
-                font-size: 1.75rem;
-            }
-
-            .article-content {
-                font-size: 1rem;
-                line-height: 1.8;
-            }
-
-            .article-meta-top {
-                flex-wrap: wrap;
-                font-size: 0.85rem;
-            }
-
-            .nav-articles {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .back-link-wrapper {
-                padding: 1rem 1rem 0.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .article-container {
-                padding: 1rem 1rem 1.5rem;
-            }
-
-            .article-title {
-                font-size: 1.5rem;
-                margin-bottom: 0.75rem;
-            }
-
-            .article-summary {
-                font-size: 1rem;
-            }
-
-            .article-content {
-                font-size: 0.95rem;
-                line-height: 1.75;
-            }
-
-            .nav-article {
-                padding: 1rem;
-            }
-        }
-
-        @media print {
-            .back-link-wrapper,
-            .article-navigation,
-            .article-footer {
-                display: none;
-            }
-
-            body {
-                background: white;
-            }
-
-            .article-container {
-                max-width: 100%;
-                padding: 0;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #0EA5E9; --primary-dark: #0284C7; --primary-light: #E0F2FE; --text-primary: #111827; --text-secondary: #6B7280; --border: #E5E7EB; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text-primary); background: #fff; line-height: 1.6; }
+        .back-link-wrapper { max-width: 820px; margin: 0 auto; padding: 1.5rem 2rem 0.5rem; }
+        .back-link { display: inline-flex; align-items: center; color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+        .back-link:hover { color: var(--primary-dark); }
+        .back-link::before { content: "←"; margin-right: 0.5rem; }
+        .article-container { max-width: 820px; margin: 0 auto; padding: 2rem 2rem 3rem; }
+        .article-header { margin-bottom: 2.5rem; }
+        .article-meta-top { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary); flex-wrap: wrap; }
+        .article-number { color: var(--primary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        .article-tag { background: var(--primary-light); color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+        .article-title { font-size: 2.125rem; font-weight: 700; line-height: 1.3; margin-bottom: 1rem; }
+        .article-summary { font-size: 1.125rem; color: #6B7280; line-height: 1.6; }
+        .article-content { font-size: 1.125rem; line-height: 1.9; }
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-footer { margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem; }
+        @media (max-width: 768px) { .article-container { padding: 1.5rem 1rem 2rem; } .article-title { font-size: 1.75rem; } .article-content { font-size: 1rem; } }
+        @media (max-width: 480px) { .article-title { font-size: 1.5rem; } .article-content { font-size: 0.95rem; } }
     </style>
 </head>
 <body>
-    <div class="back-link-wrapper">
-        <a href="/articles/" class="back-link">返回文章列表</a>
-    </div>
-
+    <div class="back-link-wrapper"><a href="/articles/" class="back-link">返回文章列表</a></div>
     <article class="article-container">
         <header class="article-header">
             <div class="article-meta-top">
                 <span class="article-number">AssetPath 004</span>
-                <div class="divider"></div>
-                <div class="meta-item">
-                    <time datetime="2026-06-24">2026年6月24日</time>
-                </div>
-                <div class="meta-item">
-                    <span>6分钟阅读</span>
-                </div>
+                <span class="article-tag">Insights</span>
+                <span>2026年6月24日 · 6分钟阅读</span>
             </div>
             <h1 class="article-title">香港公司还是美国LLC？你可能问错了问题</h1>
-            <p class="article-summary">很多人纠结香港和美国，却从未思考过资金流动。真正决定答案的，从来不是注册费用。</p>
+            <p class="article-summary">真正决定答案的，从来不是注册费用，而是资金路径。</p>
         </header>
-
         <div class="article-content">
-            <p>几乎每个出海创业者都会卡在这个问题。</p>
 
-            <p>香港公司还是美国LLC。</p>
+            <p>公司不是起点。<a href="/articles/008-capital-flow.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">资金路径才是起点。</a>选择香港公司还是美国LLC，本质上是在选择：你的钱从哪里来，流向哪里，以及这套路径在未来几年是否还适用。</p>
 
-            <p>我也经历过这个阶段。看得越多，反而越不知道该怎么选。后来慢慢发现，问题可能不在香港，也不在美国。</p>
+            <p>几乎每个出海创业者都会卡在这个问题上。看的资料越多，反而越不知道该怎么选。后来发现，卡住的原因往往不是信息不够，而是问题问错了。</p>
 
-            <p>真正决定选择的，往往不是注册费用。而是你的钱从哪里来，以及未来几年准备去哪里。</p>
+            <p>有人做跨境贸易，花了三个月研究香港和美国的税率，最后注册了美国LLC，因为看起来能省成本。结果两年后才发现，客户几乎都在亚洲，每笔钱进来都要经过中介，汇率损失加手续费，比省下的注册费亏了十几倍。他后来说，一开始如果先看清楚钱怎么流动，选择就会很不一样。</p>
 
-            <p>我认识一个做跨境贸易的人。花了三个月研究香港和美国两地的税率。最后注册了美国LLC，因为看起来能省成本。结果两年后才发现，客户几乎都在亚洲。每笔钱进来都要经过中介，汇率损失加手续费，最后比省下的注册费亏了十几倍。</p>
+            <p>真正做得顺的人，很少纠结香港还是LLC。不是因为他们知道得更多，而是因为他们先知道自己的客户在哪里。</p>
 
-            <p>他说，其实一开始如果能清楚地看到钱怎么流动，选择就会很不一样。很多人研究的是公司。他后来研究的是钱。一下子就清楚了。</p>
+            <p>客户主要在亚洲，<a href="/articles/010-when-hk.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">香港公司</a>往往是顺手的。香港是亚洲金融生态默认理解的商业语言，与亚洲客户、银行、供应商的兼容性更高。客户主要在欧美，<a href="/articles/009-when-llc.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">美国LLC</a>往往是顺手的。LLC是美国金融体系长期使用、长期理解的法律结构，Stripe、Mercury、IBKR对它的兼容性最高。</p>
 
-            <p>后来我发现一个很有意思的现象。真正做得顺的人，很少纠结香港还是LLC。不是因为他们知道得更多，而是因为他们先知道自己的客户在哪里。</p>
+            <p>但公司结构只是第一层判断。还有几个变量，很多人在注册之前没有想到。<a href="/articles/011-tax-residency.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">税务居民身份</a>，是其中影响最深远的一个——同样注册LLC，不同税务居民身份的人，最终面对的税务结果可能完全不同。<a href="/articles/015-overseas-accounts.html" style="color:#0EA5E9;text-decoration:none;border-bottom:1px solid #BAE6FD;">账户体系的设计</a>，也需要和公司结构同步考虑，而不是注册完成后才开始研究。</p>
 
-            <p>客户主要在中国或亚洲。供应链在中国。→ 香港公司往往是顺手的。</p>
+            <p>香港公司和美国LLC，从来不是两个答案。它们是不同资金路径上的两个节点。</p>
 
-            <p>客户主要在欧美。需要Stripe收款。→ 美国LLC往往是顺手的。</p>
+            <p>问清楚路径，节点的选择自然清晰。</p>
 
-            <p>反而那些纠结的人，通常是因为没有清楚地看过自己的业务流。于是在所有选项面前都有点不确定。</p>
-
-            <p>判断其实很简单。问题是，大多数人问的是"香港还是美国"。其实应该问的是"我的客户在哪里，钱怎么流动，未来准备去哪里"。</p>
-
-            <p>香港公司和美国LLC，从来不是两个答案。它们只是不同路径上的两个节点。当你看清这些问题的时候，公司选择往往已经有了答案。</p>
         </div>
-
         <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid #E5E7EB;">
-            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">
-                ← 返回文章列表
-            </a>
+            <a href="/articles/" style="color:#0EA5E9;text-decoration:none;font-weight:500;font-size:1rem;">← 返回文章列表</a>
+            <p style="margin-top:2rem;font-size:1rem;color:#0EA5E9;font-weight:600;">Stop Researching. Start Deciding.</p>
         </div>
     </article>
-
-    <footer class="article-footer">
-        <p class="footer-tagline">Stop Researching. Start Deciding.</p>
-        <p>© 2024 AssetPath. All rights reserved.</p>
-    </footer>
+    <footer class="article-footer"><p>© 2024 AssetPath. All rights reserved.</p></footer>
 </body>
 </html>
