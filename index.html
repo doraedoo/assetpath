@@ -343,6 +343,10 @@
         #screen-7 {
             background: white;
             margin-top: -15px;
+            min-height: auto;
+            padding-top: 30px;
+            padding-bottom: 45px;
+            justify-content: flex-start;
         }
 
         .cta-container {
@@ -732,42 +736,41 @@
 
     <script src="/js/category-engine.js"></script>
     <script>
-        (async function() {
-            try {
-                // 确保CategoryEngine已加载，最多等待1秒
-                let attempts = 0;
-                while (typeof assetpathEngine === 'undefined' && attempts < 20) {
-                    await new Promise(resolve => setTimeout(resolve, 50));
-                    attempts++;
-                }
-                
-                if (typeof assetpathEngine === 'undefined') {
-                    throw new Error('CategoryEngine failed to load');
-                }
-                
-                // 初始化引擎并加载文章
-                await assetpathEngine.init();
-                const latestArticles = assetpathEngine.getLatestArticles(2);
-                
-                let html = '';
-                latestArticles.forEach(article => {
-                    const articleUrl = `/articles/${article.slug}.html`;
-                    html += `
-                    <div style="margin-bottom:12px;">
-                        <a href="${articleUrl}"
-                           style="font-size:22px;font-weight:700;color:#0F172A;text-decoration:none;">
-                            ${article.title}
-                        </a>
-                    </div>
-                    `;
-                });
-                
-                document.getElementById('latest-articles-content').innerHTML = html;
-            } catch (err) {
-                console.error('Failed to load latest articles:', err);
-                document.getElementById('latest-articles-content').innerHTML = '<p style="color: #94a3b8;">加载失败</p>';
+        function loadLatestArticles() {
+            var container = document.getElementById('latest-articles-content');
+            
+            if (typeof assetpathEngine === 'undefined') {
+                container.innerHTML = '<p style="color: #94a3b8;">加载失败</p>';
+                return;
             }
-        })();
+            
+            assetpathEngine.init().then(function() {
+                try {
+                    var latestArticles = assetpathEngine.getLatestArticles(2);
+                    
+                    var html = '';
+                    latestArticles.forEach(function(article) {
+                        var articleUrl = '/articles/' + article.slug + '.html';
+                        html += '<div style="margin-bottom:12px;"><a href="' + articleUrl + '" style="font-size:22px;font-weight:700;color:#0F172A;text-decoration:none;">' + article.title + '</a></div>';
+                    });
+                    
+                    container.innerHTML = html;
+                } catch (err) {
+                    console.error('Error rendering articles:', err);
+                    container.innerHTML = '<p style="color: #94a3b8;">加载失败</p>';
+                }
+            }).catch(function(err) {
+                console.error('Failed to load latest articles:', err);
+                container.innerHTML = '<p style="color: #94a3b8;">加载失败</p>';
+            });
+        }
+        
+        // 在DOM加载完成后执行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadLatestArticles);
+        } else {
+            loadLatestArticles();
+        }
     </script>
 </body>
 
