@@ -566,7 +566,7 @@
             <div class="hero-logo">AssetPath｜资产蓝图</div>
             <h1 class="hero-title">
                 复杂世界里，<br>
-                找到属于自己的蓝图。
+                找到适合自己的蓝图。
             </h1>
             <p class="hero-subtitle">
                 关于资产、身份与生活方式，<br>
@@ -652,25 +652,23 @@
             <h2 class="screen-5-title">
                 从你最关心的问题开始
             </h2>
-           <div style="margin:0 auto 40px auto;padding:24px;background:#f8fafc;border-left:4px solid #0EA5E9;border-radius:8px;max-width:900px;">
-
+            <div id="latest-articles-box" style="margin-bottom:40px;padding:24px;background:#f8fafc;border-left:4px solid #0EA5E9;border-radius:8px;">
+    
     <div style="font-size:14px;color:#0EA5E9;font-weight:600;margin-bottom:12px;">
         最新文章
     </div>
 
     <div style="margin-bottom:12px;">
-        <a href="/articles/001-blueprint.html"
-           style="font-size:20px;font-weight:700;color:#0F172A;text-decoration:none;"
-           onmouseover="this.style.color='#0EA5E9'"
-           onmouseout="this.style.color='#0F172A'">
+        <a href="/articles/001-复杂世界里找到属于自己的蓝图.html"
+           style="font-size:20px;font-weight:700;color:#0F172A;text-decoration:none;">
             复杂世界里，找到属于自己的蓝图
         </a>
     </div>
 
-    <div style="margin-top:16px;">
-        <a href="/articles/index.html"
-           style="color:#0EA5E9;font-weight:600;text-decoration:none;">
-            查看全部文章 →
+    <div>
+        <a href="/articles/002-什么样的人真的需要第二身份.html"
+           style="font-size:20px;font-weight:700;color:#0F172A;text-decoration:none;">
+            什么样的人真的需要第二身份？
         </a>
     </div>
 
@@ -758,7 +756,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-title">AssetPath｜资产蓝图</div>
-            <p class="footer-desc">复杂世界里，<br>找到属于自己的蓝图。</p>
+            <p class="footer-desc">复杂世界里，<br>找到适合自己的蓝图。</p>
             <div class="footer-contact">
                 <p>Questions? <a href="mailto:hello@assetpath.app">hello@assetpath.app</a></p>
                 <p style="margin-top: 12px; font-size: 12px;">
@@ -767,7 +765,48 @@
                 </p>
             </div>
         </div>
-    </footer>
+    </footer>    <!-- Category Engine -->
+    <script src="/js/category-engine.js"></script>
+    <script>
+        // Task003: Latest Articles Engine V1
+        // 首页是 CategoryEngine 的第一个消费者
+        // 通过 engine.getLatestArticles(2) 驱动「最新文章」模块
+        (async function () {
+            var box = document.getElementById('latest-articles-box');
+            if (!box) return;
+
+            try {
+                // 等待 engine 初始化完成后再渲染，不重复 fetch
+                if (!assetpathEngine.isReady) {
+                    await assetpathEngine.init();
+                }
+                var latest = assetpathEngine.getLatestArticles(2);
+                if (!latest || latest.length === 0) return;
+
+                // 精确复现原有 HTML 结构和 inline style，UI 零变化
+                var linksHTML = latest.map(function (a, i) {
+                    var isLast = (i === latest.length - 1);
+                    var wrapStyle = isLast ? '' : ' style="margin-bottom:12px;"';
+                    return '<div' + wrapStyle + '>' +
+                        '<a href="/articles/' + a.url + '"' +
+                        ' style="font-size:20px;font-weight:700;color:#0F172A;text-decoration:none;">' +
+                        a.title +
+                        '</a>' +
+                        '</div>';
+                }).join('\n');
+
+                box.innerHTML =
+                    '<div style="font-size:14px;color:#0EA5E9;font-weight:600;margin-bottom:12px;">\n' +
+                    '    最新文章\n' +
+                    '</div>\n' +
+                    linksHTML;
+
+            } catch (e) {
+                // 降级：engine 失败时保留原有静态内容，不做任何改动
+                console.warn('[AssetPath] Latest Articles Engine fallback:', e);
+            }
+        })();
+    </script>
 </body>
 
 </html>
