@@ -702,19 +702,20 @@
         </div>
     </section>
 
-    <!-- 第七屏：CTA -->
+    <!-- 第七屏：Early Access -->
     <section class="screen" id="screen-7">
         <div class="container">
             <div class="cta-container">
-                <h2 class="cta-title">加入等候名单</h2>
+                <h2 class="cta-title">申请提前体验</h2>
                 <p class="cta-description">
                     决策工具即将上线。<br>
-                    留下邮箱，我们会优先通知你。
+                    留下邮箱，第一时间获得使用权。
                 </p>
-                <div class="email-input-group">
-                    <input type="email" class="email-input" placeholder="你的邮箱地址">
-                    <button class="email-button">立即加入</button>
-                </div>
+                <form id="early-access-form" class="email-input-group">
+                    <input type="email" id="email-input" class="email-input" placeholder="你的邮箱地址" required>
+                    <button type="submit" class="email-button" id="submit-btn">立即申请</button>
+                </form>
+                <p id="form-message" style="margin-top: 12px; font-size: 14px; color: #0EA5E9; display: none;"></p>
             </div>
         </div>
     </section>
@@ -765,12 +766,83 @@
             });
         }
         
-        // 在DOM加载完成后执行
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', loadLatestArticles);
         } else {
             loadLatestArticles();
         }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('early-access-form');
+            var emailInput = document.getElementById('email-input');
+            var submitBtn = document.getElementById('submit-btn');
+            var formMessage = document.getElementById('form-message');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                var email = emailInput.value.trim();
+                if (!email) {
+                    showMessage('请输入邮箱地址', 'error');
+                    return;
+                }
+                
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    showMessage('邮箱格式不正确', 'error');
+                    return;
+                }
+                
+                submitBtn.disabled = true;
+                submitBtn.textContent = '...';
+                formMessage.style.display = 'none';
+                
+                fetch('/api/early-access', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        source: 'homepage'
+                    })
+                })
+                .then(function(res) {
+                    return res.json();
+                })
+                .then(function(data) {
+                    if (data.success) {
+                        submitBtn.textContent = '✓ 申请已提交';
+                        submitBtn.style.background = '#10B981';
+                        emailInput.disabled = true;
+                        showMessage('感谢你的申请，我们会尽快联系你。', 'success');
+                    } else {
+                        showMessage('出错了，请稍后重试', 'error');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = '立即申请';
+                    }
+                })
+                .catch(function(err) {
+                    console.error('Error:', err);
+                    showMessage('网络错误，请检查连接后重试', 'error');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '立即申请';
+                });
+            });
+            
+            function showMessage(text, type) {
+                formMessage.textContent = text;
+                formMessage.style.display = 'block';
+                if (type === 'error') {
+                    formMessage.style.color = '#EF4444';
+                } else if (type === 'success') {
+                    formMessage.style.color = '#10B981';
+                } else {
+                    formMessage.style.color = '#0EA5E9';
+                }
+            }
+        });
     </script>
 </body>
 
