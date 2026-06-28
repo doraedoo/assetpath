@@ -123,7 +123,7 @@ function createCategoryEngine(jsonUrl) {
 }
 
 // 全局单例（供首页、分类页共用）
-var assetpathEngine = createCategoryEngine('/articles.json');
+var assetpathEngine = createCategoryEngine('/articles/articles.json');
 
 // 导出（兼容 ES Module 和普通 script 两种用法）
 if (typeof module !== 'undefined' && module.exports) {
