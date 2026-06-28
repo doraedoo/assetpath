@@ -342,6 +342,7 @@
            =================================== */
         #screen-7 {
             background: white;
+            margin-top: -15px;
         }
 
         .cta-container {
@@ -733,6 +734,18 @@
     <script>
         (async function() {
             try {
+                // 确保CategoryEngine已加载，最多等待1秒
+                let attempts = 0;
+                while (typeof assetpathEngine === 'undefined' && attempts < 20) {
+                    await new Promise(resolve => setTimeout(resolve, 50));
+                    attempts++;
+                }
+                
+                if (typeof assetpathEngine === 'undefined') {
+                    throw new Error('CategoryEngine failed to load');
+                }
+                
+                // 初始化引擎并加载文章
                 await assetpathEngine.init();
                 const latestArticles = assetpathEngine.getLatestArticles(2);
                 
