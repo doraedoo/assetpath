@@ -652,7 +652,7 @@
             <h2 class="screen-5-title">
                 从你最关心的问题开始
             </h2>
-            <div id="latest-articles-box" style="margin-bottom:40px;padding:24px;background:#f8fafc;border-left:4px solid #0EA5E9;border-radius:8px;">
+            <div style="margin-bottom:40px;padding:24px;background:#f8fafc;border-left:4px solid #0EA5E9;border-radius:8px;">
     
     <div style="font-size:14px;color:#0EA5E9;font-weight:600;margin-bottom:12px;">
         最新文章
@@ -765,48 +765,7 @@
                 </p>
             </div>
         </div>
-    </footer>    <!-- Category Engine -->
-    <script src="./js/category-engine.js"></script>
-    <script>
-        // Task003: Latest Articles Engine V1
-        // 首页是 CategoryEngine 的第一个消费者
-        // 通过 engine.getLatestArticles(2) 驱动「最新文章」模块
-        (async function () {
-            var box = document.getElementById('latest-articles-box');
-            if (!box) return;
-
-            try {
-                // 等待 engine 初始化完成后再渲染，不重复 fetch
-                if (!assetpathEngine.isReady) {
-                    await assetpathEngine.init();
-                }
-                var latest = assetpathEngine.getLatestArticles(2);
-                if (!latest || latest.length === 0) return;
-
-                // 精确复现原有 HTML 结构和 inline style，UI 零变化
-                var linksHTML = latest.map(function (a, i) {
-                    var isLast = (i === latest.length - 1);
-                    var wrapStyle = isLast ? '' : ' style="margin-bottom:12px;"';
-                    return '<div' + wrapStyle + '>' +
-                        '<a href="./articles/' + a.url + '"' +
-                        ' style="font-size:20px;font-weight:700;color:#0F172A;text-decoration:none;">' +
-                        a.title +
-                        '</a>' +
-                        '</div>';
-                }).join('\n');
-
-                box.innerHTML =
-                    '<div style="font-size:14px;color:#0EA5E9;font-weight:600;margin-bottom:12px;">\n' +
-                    '    最新文章\n' +
-                    '</div>\n' +
-                    linksHTML;
-
-            } catch (e) {
-                // 降级：engine 失败时保留原有静态内容，不做任何改动
-                console.warn('[AssetPath] Latest Articles Engine fallback:', e);
-            }
-        })();
-    </script>
+    </footer>
 </body>
 
 </html>
