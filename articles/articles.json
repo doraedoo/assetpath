@@ -1,162 +1,242 @@
 [
- {
-  "id": "020",
-  "title": "永居和国籍，到底有什么区别？",
-  "url": "020-pr-vs-citizenship.html",
-  "date": "2026-06-27",
-  "excerpt": "两者不是同一维度的选择，错误对比会导致系统性误判。",
-  "readTime": "11分钟阅读"
-},
-{
-  "id": "019",
-  "title": "第二身份如何影响长期资产规划？",
-  "url": "019-second-identity.html",
-  "date": "2026-06-27",
-  "excerpt": "身份、税务、资产的级联关系决定了整个跨境系统的稳定性。",
-  "readTime": "11分钟阅读"
-},
-{
-  "id": "018",
-  "title": "什么时候应该开始全球资产配置？",
-  "url": "018-when-to-start.html",
-  "date": "2026-06-27",
-  "excerpt": "触发全球资产配置的不是金额，而是结构错配的出现。",
-  "readTime": "10分钟阅读"
-},
-{
-  "id": "017",
-  "title": "跨境资产，为什么需要分散在不同国家？",
-  "url": "017-asset-diversification.html",
-  "date": "2026-06-27",
-  "excerpt": "分散的不只是资产，也是制度风险。从制度层理解跨境资产分散的真正逻辑。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "016",
-  "title": "为什么越来越多人开始配置美元资产？",
-  "url": "016-usd-assets.html",
-  "date": "2026-06-27",
-  "excerpt": "配置美元，并不代表看空人民币。真正的原因是货币多元化本身就是一种风险管理。",
-  "readTime": "9分钟阅读"
-},
- {
-  "id": "015",
-  "title": "海外账户应该如何规划？",
-  "url": "015-overseas-accounts.html",
-  "date": "2026-06-27",
-  "excerpt": "账户不是存钱的地方，而是资金流动的基础设施。从资金路径理解账户体系。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "014",
-  "title": "遗产税什么时候开始需要考虑？",
-  "url": "014-estate-tax.html",
-  "date": "2026-06-27",
-  "excerpt": "遗产税不是生命最后的问题，而是资产配置第一天的问题。从资产所在地理解遗产税。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "013",
-  "title": "全球征税，到底征的是什么？",
-  "url": "013-global-tax.html",
-  "date": "2026-06-27",
-  "excerpt": "全球征税并不等于重复纳税。从税收协定、税收抵免和申报义务理解全球征税。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "012",
-  "title": "CRS 到底交换了哪些信息？",
-  "url": "012-crs.html",
-  "date": "2026-06-27",
-  "excerpt": "CRS交换的不是资产，而是信息。从信息交换机制理解 CRS 对跨境规划真正意味着什么。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "011",
-  "title": "税务居民为什么会影响跨境规划？",
-  "url": "011-tax-residency.html",
-  "date": "2026-06-27",
-  "excerpt": "很多人真正需要先确定的，不是公司，而是税务居民身份。从五个关键问题理解跨境规划的总开关。",
-  "readTime": "11分钟阅读"
-},
- {
-  "id": "010",
-  "title": "什么时候香港公司仍然是更好的选择？",
-  "url": "010-when-hk.html",
-  "date": "2026-06-27",
-  "excerpt": "香港公司适合的人依然很多。从五个变量理解香港公司的真正优势，建立自己的判断框架。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "009",
-  "title": "什么时候适合注册美国 LLC？",
-  "url": "009-when-llc.html",
-  "date": "2026-06-27",
-  "excerpt": "LLC 解决的问题，并不只有税务。从四个变量理解 LLC 的适配逻辑，建立自己的判断框架。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "008",
-  "title": "为什么资金流动路径会影响公司结构？",
-  "url": "008-capital-flow.html",
-  "date": "2026-06-27",
-  "excerpt": "为什么资金流动路径会影响公司结构？从收入、资产和个人提取三个流向，建立自己的公司结构判断框架。",
-  "readTime": "10分钟阅读"
-},
- {
-  "id": "007",
-  "title": "香港公司还是美国 LLC？",
-  "url": "007-hongkong-vs-llc.html",
-  "date": "2026-06-26",
-  "excerpt": "除了注册费用和税率，还有六个维度值得纳入判断框架，帮助建立更完整的跨境公司选择框架。",
-  "readTime": "12分钟阅读"
-}, 
   {
-    "id": "006",
-  "title": "为什么越来越多人开始寻找第二套方案",
-"url": "006-second-plan.html",
-"date": "2026-06-26",
-"excerpt": "房子不再是答案后，人们发现自己需要第二套方案。",
-"readTime": "7分钟阅读"
-},
-  {
-  "id": "005",
-  "title": "我用心研究的那些年，到底收获了什么？",
-  "url": "005-what-have-i-learned.html",
-  "date": "2026-06-25",
-  "excerpt": "整理电脑的时候，我删掉了几百份PDF。才明白自己在逃避什么。",
-  "readTime": "9分钟阅读"
-},
-  {
-    "id": "004",
-    "title": "香港公司还是美国LLC？你可能问错了问题",
-    "url": "004-hongkong-vs-llc.html",
-    "date": "2026-06-24",
-    "excerpt": "很多人纠结香港和美国，却从未思考过资金流动。真正决定答案的，从来不是注册费用。",
-    "readTime": "6分钟阅读"
-  },
-  {
-    "id": "003",
-    "title": "滞胀时代：为什么越来越努力的人，反而越来越焦虑？",
-    "url": "003-stagflation-and-asset-location.html",
-    "date": "2026-06-23",
-    "excerpt": "未来真正危险的，或许不是滞胀。而是在变化来临时，你发现自己没有Plan B。",
-    "readTime": "8分钟阅读"
-  },
-  {
-    "id": "002",
-    "title": "你真的需要第二身份吗？",
-    "url": "002-second-identity.html",
-    "date": "2026-06-22",
-    "excerpt": "很多人研究第二身份，却从来没有想清楚自己到底想解决什么问题。",
-    "readTime": "5分钟阅读"
-  },
-  {
-    "id": "001",
+    "id": 1,
+    "slug": "001-blueprint",
     "title": "复杂世界里，找到属于自己的蓝图",
     "url": "001-blueprint.html",
+    "excerpt": "信息越来越多，决策越来越难。缺的不是答案，而是找到正确的问题。",
     "date": "2026-06-22",
-    "excerpt": "信息越来越多，决策越来越难。",
-    "readTime": "5分钟阅读"
+    "readTime": "5分钟",
+    "series": "Insights",
+    "category": "insights",
+    "featured": false
+  },
+  {
+    "id": 2,
+    "slug": "002-second-identity",
+    "title": "你真的需要第二身份吗？",
+    "url": "002-second-identity.html",
+    "excerpt": "很多人研究第二身份，却从来没有想清楚自己到底想解决什么问题。",
+    "date": "2026-06-22",
+    "readTime": "5分钟",
+    "series": "Insights",
+    "category": "insights",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "slug": "003-stagflation-and-asset-location",
+    "title": "滞胀时代：为什么越来越努力的人，反而越来越焦虑？",
+    "url": "003-stagflation-and-asset-location.html",
+    "excerpt": "真正的危险不在危机本身，而在于变化来临时，你发现自己没有任何选择。",
+    "date": "2026-06-23",
+    "readTime": "8分钟",
+    "series": "Insights",
+    "category": "insights",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "slug": "004-hongkong-vs-llc",
+    "title": "香港公司还是美国LLC？你可能问错了问题",
+    "url": "004-hongkong-vs-llc.html",
+    "excerpt": "真正决定答案的，从来不是注册费用，而是资金路径。",
+    "date": "2026-06-24",
+    "readTime": "6分钟",
+    "series": "Insights",
+    "category": "insights",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "slug": "005-what-have-i-learned",
+    "title": "我用心研究的那些年，到底收获了什么？",
+    "url": "005-what-have-i-learned.html",
+    "excerpt": "整理电脑的时候，我删掉了几百份PDF。才明白自己在逃避什么。",
+    "date": "2026-06-25",
+    "readTime": "9分钟",
+    "series": "Insights",
+    "category": "insights",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "slug": "006-second-plan",
+    "title": "为什么越来越多人开始寻找第二套方案",
+    "url": "006-second-plan.html",
+    "excerpt": "房子不再是答案后，人们发现自己需要第二套方案。",
+    "date": "2026-06-26",
+    "readTime": "7分钟",
+    "series": "Insights",
+    "category": "insights",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "slug": "007-hongkong-vs-llc",
+    "title": "香港公司还是美国 LLC？",
+    "url": "007-hongkong-vs-llc.html",
+    "excerpt": "六个维度建立自己的判断框架。",
+    "date": "2026-06-26",
+    "readTime": "12分钟",
+    "series": "Framework",
+    "category": "company-business",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "slug": "008-capital-flow",
+    "title": "为什么资金流动路径会影响公司结构？",
+    "url": "008-capital-flow.html",
+    "excerpt": "公司只是资金流中的一个节点。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "company-business",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "slug": "009-when-llc",
+    "title": "什么时候适合注册美国 LLC？",
+    "url": "009-when-llc.html",
+    "excerpt": "LLC 解决的问题，并不只有税务。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "company-business",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "slug": "010-when-hk",
+    "title": "什么时候香港公司仍然是更好的选择？",
+    "url": "010-when-hk.html",
+    "excerpt": "香港公司适合的人，依然很多。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "company-business",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "slug": "011-tax-residency",
+    "title": "税务居民为什么会影响跨境规划？",
+    "url": "011-tax-residency.html",
+    "excerpt": "很多人真正需要先确定的，不是公司，而是税务居民身份。",
+    "date": "2026-06-27",
+    "readTime": "11分钟",
+    "series": "Framework",
+    "category": "tax-identity",
+    "featured": false
+  },
+  {
+    "id": 12,
+    "slug": "012-crs",
+    "title": "CRS 到底交换了哪些信息？",
+    "url": "012-crs.html",
+    "excerpt": "真正决定信息流向的，不是账户，而是税务居民身份。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "tax-identity",
+    "featured": false
+  },
+  {
+    "id": 13,
+    "slug": "013-global-tax",
+    "title": "全球征税，到底征的是什么？",
+    "url": "013-global-tax.html",
+    "excerpt": "全球征税，并不等于全球所有收入都会重复纳税。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "tax-identity",
+    "featured": false
+  },
+  {
+    "id": 14,
+    "slug": "014-estate-tax",
+    "title": "遗产税什么时候开始需要考虑？",
+    "url": "014-estate-tax.html",
+    "excerpt": "很多人忽略的，不是遗产税，而是资产所在地。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "tax-identity",
+    "featured": false
+  },
+  {
+    "id": 15,
+    "slug": "015-overseas-accounts",
+    "title": "海外账户应该如何规划？",
+    "url": "015-overseas-accounts.html",
+    "excerpt": "建立账户体系，而不是不断开户。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "global-assets",
+    "featured": false
+  },
+  {
+    "id": 16,
+    "slug": "016-usd-assets",
+    "title": "为什么越来越多人开始配置美元资产？",
+    "url": "016-usd-assets.html",
+    "excerpt": "配置美元，并不代表看空人民币。",
+    "date": "2026-06-27",
+    "readTime": "9分钟",
+    "series": "Framework",
+    "category": "global-assets",
+    "featured": false
+  },
+  {
+    "id": 17,
+    "slug": "017-asset-diversification",
+    "title": "跨境资产，为什么需要分散在不同国家？",
+    "url": "017-asset-diversification.html",
+    "excerpt": "分散的不只是资产，也是制度风险。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "global-assets",
+    "featured": false
+  },
+  {
+    "id": 18,
+    "slug": "018-when-to-start",
+    "title": "什么时候应该开始全球资产配置？",
+    "url": "018-when-to-start.html",
+    "excerpt": "比金额更重要的，是人生阶段。",
+    "date": "2026-06-27",
+    "readTime": "10分钟",
+    "series": "Framework",
+    "category": "long-term-planning",
+    "featured": false
+  },
+  {
+    "id": 19,
+    "slug": "019-second-identity",
+    "title": "第二身份如何影响长期资产规划？",
+    "url": "019-second-identity.html",
+    "excerpt": "身份、税务、资产，本来就是同一个问题。",
+    "date": "2026-06-27",
+    "readTime": "11分钟",
+    "series": "Framework",
+    "category": "long-term-planning",
+    "featured": false
+  },
+  {
+    "id": 20,
+    "slug": "020-pr-vs-citizenship",
+    "title": "永居和国籍，到底有什么区别？",
+    "url": "020-pr-vs-citizenship.html",
+    "excerpt": "两者解决的问题，从来都不同。",
+    "date": "2026-06-27",
+    "readTime": "11分钟",
+    "series": "Framework",
+    "category": "long-term-planning",
+    "featured": false
   }
 ]
