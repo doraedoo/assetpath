@@ -8,7 +8,7 @@
  * - 为首页、分类页等所有消费者提供数据
  *
  * 使用方式：
- *   const engine = new CategoryEngine('./articles.json');
+ *   const engine = new CategoryEngine('/articles.json');
  *   await engine.init();
  *   const stats = engine.getCategoryStats('company-business');
  *   const articles = engine.getArticlesByCategory('tax-identity');
@@ -152,7 +152,7 @@ class CategoryEngine {
 // 全局单例（供首页、分类页共用）
 // ─────────────────────────────────────────
 
-const assetpathEngine = new CategoryEngine('./articles.json');
+const assetpathEngine = new CategoryEngine('/articles.json');
 
 // 导出（兼容 ES Module 和普通 script 两种用法）
 if (typeof module !== 'undefined' && module.exports) {
