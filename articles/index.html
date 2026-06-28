@@ -329,62 +329,53 @@
     </div>
 
     <script>
-        (async function() {
-            try {
-                // 初始化CategoryEngine
-                await assetpathEngine.init();
-
-                // 读取URL参数中的category
-                const params = new URLSearchParams(window.location.search);
-                const category = params.get('category');
-
-                // 根据category参数获取文章
-                let articles;
-                if (category) {
-                    articles = assetpathEngine.getArticlesByCategory(category);
-                } else {
-                    articles = assetpathEngine.getAllArticles();
-                }
-
-                // 获取容器
-                const container = document.getElementById('articles-list');
-
-                // 渲染文章
-                if (articles.length === 0) {
-                    container.innerHTML = '<p style="color: #9CA3AF;">暂无文章</p>';
-                } else {
-                    container.innerHTML = articles.map(article => `
-                        <article class="article-item">
-                            <a href="/articles/${article.slug}.html" class="article-link">
-                                <div class="article-meta">
-                                    <span class="article-number">
-                                        AssetPath ${article.id}
-                                    </span>
-                                    <div class="divider"></div>
-                                    <span class="article-date">
-                                        ${article.date}
-                                    </span>
-                                </div>
-                                <h2 class="article-title">
-                                    ${article.title}
-                                </h2>
-                                <p class="article-excerpt">
-                                    ${article.excerpt}
-                                </p>
-                                <div class="article-footer">
-                                    <span class="read-time">
-                                        ${article.readTime}
-                                    </span>
-                                </div>
-                            </a>
-                        </article>
-                    `).join('');
-                }
-            } catch (error) {
-                console.error('Failed to load articles:', error);
-                document.getElementById('articles-list').innerHTML = '<p style="color: #EF4444;">加载失败，请刷新重试</p>';
+        function loadArticles() {
+            var container = document.getElementById('articles-list');
+            
+            if (typeof assetpathEngine === 'undefined') {
+                container.innerHTML = '<p style="color: #9CA3AF;">加载失败，请刷新重试</p>';
+                return;
             }
-        })();
+            
+            // 获取URL参数
+            var urlParams = new URLSearchParams(window.location.search);
+            var category = urlParams.get('category');
+            
+            assetpathEngine.init().then(function() {
+                try {
+                    var articles;
+                    if (category) {
+                        articles = assetpathEngine.getArticlesByCategory(category);
+                    } else {
+                        articles = assetpathEngine.getAllArticles();
+                    }
+                    
+                    if (articles.length === 0) {
+                        container.innerHTML = '<p style="color: #9CA3AF;">暂无文章</p>';
+                        return;
+                    }
+                    
+                    var html = articles.map(function(article) {
+                        return '<article class="article-item"><a href="/articles/' + article.slug + '.html" class="article-link"><div class="article-meta"><span class="article-number">AssetPath ' + article.id + '</span><div class="divider"></div><span class="article-date">' + article.date + '</span></div><h2 class="article-title">' + article.title + '</h2><p class="article-excerpt">' + article.excerpt + '</p><div class="article-footer"><span class="read-time">' + article.readTime + '</span></div></a></article>';
+                    }).join('');
+                    
+                    container.innerHTML = html;
+                } catch (err) {
+                    console.error('Error rendering articles:', err);
+                    container.innerHTML = '<p style="color: #EF4444;">加载失败，请刷新重试</p>';
+                }
+            }).catch(function(err) {
+                console.error('Failed to load articles:', err);
+                container.innerHTML = '<p style="color: #EF4444;">加载失败，请刷新重试</p>';
+            });
+        }
+        
+        // 在DOM加载完成后执行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadArticles);
+        } else {
+            loadArticles();
+        }
     </script>
 </body>
 </html>
