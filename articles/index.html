@@ -305,6 +305,7 @@
             }
         }
     </style>
+    <script src="/js/category-engine.js"></script>
 </head>
 <body>
     <div class="page-container">
@@ -317,80 +318,73 @@
 
         <!-- 文章列表 -->
         <main class="articles-list" id="articles-list">
-            <!-- 文章 004 -->
-<article class="article-item">
-    <a href="004-hongkong-vs-llc.html" class="article-link">
-        <div class="article-meta">
-            <span class="article-number">AssetPath 004</span>
-            <div class="divider"></div>
-            <span class="article-date">2026年6月24日</span>
-        </div>
-        <h2 class="article-title">香港公司还是美国LLC？你可能问错了问题</h2>
-        <p class="article-excerpt">很多人纠结香港和美国，却从未思考过资金流动。真正决定答案的，从来不是注册费用。</p>
-        <div class="article-footer">
-            <div class="article-tags">
-                <span class="tag">公司架构</span>
-                <span class="tag">香港公司</span>
-                <span class="tag">美国LLC</span>
-            </div>
-            <span class="read-time">6分钟阅读</span>
-        </div>
-    </a>
-</article>
-                   <!-- 页脚 -->
+            <p style="color: #9CA3AF;">加载中...</p>
+        </main>
+
+        <!-- 页脚 -->
         <footer class="page-footer">
             <p class="footer-tagline">Stop Researching. Start Deciding.</p>
             <p>© 2024 AssetPath. All rights reserved.</p>
         </footer>
     </div>
+
     <script>
-fetch('articles.json')
-  .then(response => response.json())
-  .then(articles => {
+        (async function() {
+            try {
+                // 初始化CategoryEngine
+                await assetpathEngine.init();
 
-    const container =
-      document.getElementById('articles-list');
+                // 读取URL参数中的category
+                const params = new URLSearchParams(window.location.search);
+                const category = params.get('category');
 
-    container.innerHTML =
-      articles.map(article => `
+                // 根据category参数获取文章
+                let articles;
+                if (category) {
+                    articles = assetpathEngine.getArticlesByCategory(category);
+                } else {
+                    articles = assetpathEngine.getAllArticles();
+                }
 
-      <article class="article-item">
-        <a href="${article.url}"
-           class="article-link">
+                // 获取容器
+                const container = document.getElementById('articles-list');
 
-          <div class="article-meta">
-            <span class="article-number">
-              AssetPath ${article.id}
-            </span>
-
-            <div class="divider"></div>
-
-            <span class="article-date">
-              ${article.date}
-            </span>
-          </div>
-
-          <h2 class="article-title">
-            ${article.title}
-          </h2>
-
-          <p class="article-excerpt">
-            ${article.excerpt}
-          </p>
-
-          <div class="article-footer">
-            <span class="read-time">
-              ${article.readTime}
-            </span>
-          </div>
-
-        </a>
-      </article>
-
-      `).join('');
-
-  })
-  .catch(error => console.error(error));
-</script>
+                // 渲染文章
+                if (articles.length === 0) {
+                    container.innerHTML = '<p style="color: #9CA3AF;">暂无文章</p>';
+                } else {
+                    container.innerHTML = articles.map(article => `
+                        <article class="article-item">
+                            <a href="/articles/${article.slug}.html" class="article-link">
+                                <div class="article-meta">
+                                    <span class="article-number">
+                                        AssetPath ${article.id}
+                                    </span>
+                                    <div class="divider"></div>
+                                    <span class="article-date">
+                                        ${article.date}
+                                    </span>
+                                </div>
+                                <h2 class="article-title">
+                                    ${article.title}
+                                </h2>
+                                <p class="article-excerpt">
+                                    ${article.excerpt}
+                                </p>
+                                <div class="article-footer">
+                                    <span class="read-time">
+                                        ${article.readTime}
+                                    </span>
+                                </div>
+                            </a>
+                        </article>
+                    `).join('');
+                }
+            } catch (error) {
+                console.error('Failed to load articles:', error);
+                document.getElementById('articles-list').innerHTML = '<p style="color: #EF4444;">加载失败，请刷新重试</p>';
+            }
+        })();
+    </script>
 </body>
 </html>
