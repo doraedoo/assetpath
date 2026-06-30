@@ -65,7 +65,11 @@
 
   /* Hero / Mirror line */
   .hero {
-    padding: 96px 0 64px;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 0;
   }
   .eyebrow {
     font-size: 13px;
@@ -112,12 +116,16 @@
 
   /* Process */
   .process-title {
+    display: inline-block;
     font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--gray-light);
-    font-weight: 600;
-    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    color: var(--gold);
+    font-weight: 700;
+    background: rgba(184, 146, 74, 0.1);
+    border: 1px solid rgba(184, 146, 74, 0.25);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 28px;
   }
   .process-line {
     display: flex;
@@ -244,10 +252,17 @@
     color: var(--gray-light);
   }
 
+  .mobile-only {
+    display: none;
+  }
+
   @media (max-width: 600px) {
     .hero { padding: 56px 0 40px; }
     .mirror-line { font-size: 22px; }
     .cta-card { padding: 32px 24px; }
+    .mobile-only {
+      display: inline;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -259,12 +274,16 @@
     margin-top: 64px;
   }
   .form-section-title {
+    display: inline-block;
     font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--gray-light);
-    font-weight: 600;
-    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    color: var(--gold);
+    font-weight: 700;
+    background: rgba(184, 146, 74, 0.1);
+    border: 1px solid rgba(184, 146, 74, 0.25);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 28px;
   }
   .form-group {
     margin-bottom: 32px;
@@ -530,7 +549,7 @@
     <section class="hero">
       <div class="eyebrow">Decision Interview</div>
       <h1 class="mirror-line">
-        你面对的，从来不是<span class="em">一个</span>选择题。<br>
+        你面对的，<br class="mobile-only">从来不是<span class="em">一个</span>选择题。<br>
         而是一连串<span class="em">互相牵制</span>的决策。
       </h1>
       <p class="sub">
@@ -585,9 +604,9 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">4. 你希望大概多久内看到结果？</label>
+          <label class="form-label">4. 你希望决策确定后，多久落地？</label>
           <div class="form-hint">紧急 / 一年左右 / 长期规划都可以</div>
-          <input class="form-input" type="text" name="timeline" required placeholder="例如：希望3个月内完成">
+          <input class="form-input" type="text" name="timeline" required placeholder="例如：希望3个月内完成公司注册">
         </div>
 
         <div class="form-group">
@@ -596,9 +615,9 @@
           <input class="form-input" type="email" name="email" required placeholder="your@email.com">
         </div>
 
-        <div class="beta-inline-note">内测期间，体验完成后提供简短反馈即可申请全额返现</div>
+        <div class="beta-inline-note">内测期间，体验完成后提供简短反馈，<br class="mobile-only">即可申请全额返现</div>
         <button type="submit" class="submit-btn" id="submitBtn">确认信息，进入付款</button>
-        <div class="form-footer-note">提交后，我会亲自分析你的情况，并在 24 小时内发送完整 Blueprint</div>
+        <div class="form-footer-note">提交后，我会亲自分析你的情况，<br>并在 24 小时内发送完整 Blueprint</div>
       </form>
 
       <div class="payment-block" id="paymentBlock">
@@ -658,7 +677,7 @@
     <div class="cta-card">
       <div class="cta-card-title">直接联系顾问</div>
       <p class="cta-card-text">
-        如果你更习惯直接聊，也可以添加微信，备注「决策评估」，我们会主动联系你。
+        如果你更习惯直接聊，也可以添加下方微信，我们会主动联系你。
       </p>
 
       <div class="wechat-block">
@@ -673,8 +692,8 @@
     </div>
 
     <div class="footer-note">
-      <p>这不是一份通用报告。我们只在确认理解你的情况后，才开始分析。</p>
-      <p>这是为什么我们需要先聊几句，而不是直接给你一个表单。</p>
+      <p>每一份 Blueprint，都是基于你的具体情况、约束和目标，逐一权衡后得出的判断——不是套用模板，也不是泛泛而谈。</p>
+      <p>这也是为什么我们需要先理解你的处境，而不是直接给你一份通用报告。</p>
     </div>
 
     <div class="footer-tagline">
