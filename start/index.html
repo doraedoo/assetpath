@@ -26,7 +26,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
     background: var(--cream);
     color: var(--navy);
-    line-height: 1.7;
+    line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -65,7 +65,7 @@
 
   /* Hero / Mirror line */
   .hero {
-    padding: 88px 0 56px;
+    padding: 96px 0 64px;
   }
   .eyebrow {
     font-size: 13px;
@@ -90,17 +90,24 @@
   }
 
   .sub {
-    margin-top: 28px;
-    font-size: 17px;
+    margin-top: 32px;
+    font-size: 16px;
     color: var(--gray);
-    line-height: 1.8;
+    line-height: 1.75;
+  }
+  .sub-line {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .sub-line:last-child {
+    margin-bottom: 0;
   }
 
   /* Divider */
   .divider {
     height: 1px;
     background: var(--border);
-    margin: 56px 0;
+    margin: 64px 0;
   }
 
   /* Process */
@@ -115,7 +122,7 @@
   .process-line {
     display: flex;
     gap: 16px;
-    padding: 18px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--border);
     align-items: baseline;
   }
@@ -130,6 +137,7 @@
   }
   .process-text {
     font-size: 16px;
+    line-height: 1.75;
     color: var(--navy-soft);
   }
   .process-text strong {
@@ -139,7 +147,7 @@
 
   /* CTA Card */
   .cta-card {
-    margin-top: 56px;
+    margin-top: 64px;
     background: var(--navy);
     border-radius: 4px;
     padding: 40px 36px;
@@ -148,13 +156,13 @@
   .cta-card-title {
     font-family: "Noto Serif SC", Georgia, "PingFang SC", serif;
     font-size: 22px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     color: #FFFFFF;
   }
   .cta-card-text {
     font-size: 15px;
     color: rgba(250, 249, 246, 0.72);
-    line-height: 1.75;
+    line-height: 1.8;
     margin-bottom: 28px;
   }
   .cta-card-text strong {
@@ -166,15 +174,15 @@
     background: rgba(250, 249, 246, 0.06);
     border: 1px solid rgba(250, 249, 246, 0.14);
     border-radius: 3px;
-    padding: 20px 22px;
-    margin-bottom: 22px;
+    padding: 22px 24px;
+    margin-bottom: 24px;
   }
   .wechat-label {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--gold-soft);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 600;
   }
   .wechat-id {
@@ -187,8 +195,8 @@
   .wechat-note {
     font-size: 13.5px;
     color: rgba(250, 249, 246, 0.55);
-    margin-top: 10px;
-    line-height: 1.6;
+    margin-top: 12px;
+    line-height: 1.7;
   }
 
   .copy-btn {
@@ -213,21 +221,27 @@
 
   /* Footer note */
   .footer-note {
-    margin-top: 40px;
-    padding-top: 32px;
+    margin-top: 48px;
+    padding-top: 36px;
     border-top: 1px solid var(--border);
-    font-size: 13.5px;
-    color: var(--gray-light);
-    line-height: 1.7;
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+  .footer-note p {
+    margin-bottom: 8px;
+  }
+  .footer-note p:last-child {
+    margin-bottom: 0;
   }
 
   .footer-tagline {
-    margin-top: 48px;
-    padding: 32px 0 64px;
+    margin-top: 56px;
+    padding: 36px 0 72px;
     text-align: center;
-    font-size: 13px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
     color: var(--gray-light);
-    letter-spacing: 0.3px;
   }
 
   @media (max-width: 600px) {
@@ -242,7 +256,7 @@
 
   /* Form styles */
   .interview-form {
-    margin-top: 56px;
+    margin-top: 64px;
   }
   .form-section-title {
     font-size: 13px;
@@ -253,19 +267,20 @@
     margin-bottom: 24px;
   }
   .form-group {
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
   .form-label {
     display: block;
     font-size: 15.5px;
     color: var(--navy);
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    line-height: 1.5;
   }
   .form-hint {
-    font-size: 13.5px;
-    color: var(--gray-light);
-    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 14px;
     line-height: 1.6;
   }
   .form-textarea, .form-input {
@@ -287,6 +302,13 @@
     outline: none;
     border-color: var(--gold);
     box-shadow: 0 0 0 3px rgba(184, 146, 74, 0.12);
+  }
+
+  .beta-inline-note {
+    font-size: 13.5px;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 14px;
   }
 
   .submit-btn {
@@ -358,58 +380,49 @@
     display: none;
     background: var(--navy);
     border-radius: 4px;
-    padding: 40px 36px;
+    padding: 44px 36px;
     text-align: center;
     color: #FFFFFF;
   }
   .payment-block.show { display: block; }
   .payment-check {
     font-size: 28px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     color: var(--gold-soft);
   }
   .payment-title {
     font-family: "Noto Serif SC", Georgia, "PingFang SC", serif;
     font-size: 21px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     color: #FFFFFF;
   }
   .payment-text {
     font-size: 15px;
     color: rgba(250, 249, 246, 0.75);
-    line-height: 1.7;
-    margin-bottom: 28px;
+    line-height: 1.8;
+    margin-bottom: 32px;
   }
   .payment-text strong {
     color: var(--gold-soft);
   }
-  .qr-wrap {
-    background: #FFFFFF;
-    border-radius: 4px;
-    padding: 20px;
+
+  .value-checklist {
     display: inline-block;
-    margin-bottom: 18px;
+    text-align: left;
+    margin-bottom: 32px;
   }
-  .qr-wrap img {
-    width: 220px;
-    height: 220px;
-    display: block;
-    object-fit: contain;
+  .vc-item {
+    font-size: 14px;
+    color: rgba(250, 249, 246, 0.82);
+    line-height: 1.9;
   }
+
   .payment-price {
     font-family: Georgia, serif;
-    font-size: 28px;
+    font-size: 32px;
     color: var(--gold-soft);
     font-weight: 600;
-    margin-bottom: 6px;
-  }
-  .payment-note {
-    font-size: 13.5px;
-    color: rgba(250, 249, 246, 0.55);
-    line-height: 1.7;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(250, 249, 246, 0.12);
+    margin-bottom: 24px;
   }
 
   .beta-badge {
@@ -419,42 +432,59 @@
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    padding: 6px 14px;
+    padding: 7px 16px;
     border-radius: 20px;
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
   .beta-note {
     font-size: 14px;
     color: rgba(250, 249, 246, 0.78);
-    line-height: 1.7;
+    line-height: 1.75;
     max-width: 380px;
-    margin: 0 auto;
+    margin: 0 auto 32px;
   }
   .beta-note strong {
     color: var(--gold-soft);
   }
 
+  .qr-wrap {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 20px;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .qr-wrap img {
+    width: 220px;
+    height: 220px;
+    display: block;
+    object-fit: contain;
+  }
+
   .next-step-note {
-    margin-top: 24px;
-    padding: 16px 18px;
+    margin-top: 32px;
+    padding: 18px 20px;
     background: rgba(184, 146, 74, 0.08);
     border: 1px solid rgba(184, 146, 74, 0.2);
     border-radius: 3px;
-    font-size: 13.5px;
-    color: rgba(250, 249, 246, 0.82);
-    line-height: 1.7;
-  }
-
-  .value-checklist {
-    display: inline-block;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  .vc-item {
     font-size: 14px;
     color: rgba(250, 249, 246, 0.82);
-    padding: 4px 0;
+    line-height: 1.75;
+  }
+
+  .payment-note {
+    font-size: 13.5px;
+    color: rgba(250, 249, 246, 0.55);
+    line-height: 1.75;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(250, 249, 246, 0.12);
+  }
+  .payment-note p {
+    margin-bottom: 8px;
+  }
+  .payment-note p:last-child {
+    margin-bottom: 0;
   }
 
   .paid-btn {
@@ -504,7 +534,8 @@
         而是一连串<span class="em">互相牵制</span>的决策。
       </h1>
       <p class="sub">
-        用几分钟时间告诉我们你的情况。我们不会给你更多信息，而是帮你找到真正应该做的决策。
+        <span class="sub-line">用几分钟时间告诉我们你的情况。</span>
+        <span class="sub-line">我们不会给你更多信息，而是帮你找到真正应该做的决策。</span>
       </p>
     </section>
 
@@ -528,22 +559,22 @@
 
     <section class="interview-form">
       <div class="form-section-title">开始你的决策评估</div>
-      <p style="font-size: 15px; color: var(--gray); margin-bottom: 32px; line-height: 1.75;">
-        你将获得一份<strong style="color: var(--navy);">可以直接执行的决策路径</strong>，而不是信息整理。回答以下四个问题，我们会在 <strong style="color: var(--navy);">24 小时内</strong>把完整分析发到你的邮箱。<br><br>
-        <span style="color: var(--gold); font-weight: 600;">前 10 位用户为内测名额</span>，体验完成后提供简短反馈即可申请全额返现。
+      <p style="font-size: 15px; color: var(--gray); margin-bottom: 40px; line-height: 1.85;">
+        你将获得一份<strong style="color: var(--navy);">可以直接执行的决策路径</strong>，而不是信息整理。<br>
+        回答以下四个问题，我们会在 24 小时内把完整分析发到你的邮箱。
       </p>
 
       <form id="decisionForm" action="https://formspree.io/f/xpqgjloa" method="POST">
 
         <div class="form-group">
           <label class="form-label">1. 现在最困扰你的问题是什么？</label>
-          <div class="form-hint">不用想得很完整，简单说说就好</div>
+          <div class="form-hint">越详细，我们越能给出精准的判断</div>
           <textarea class="form-textarea" name="goal" required placeholder="例如：想在海外开公司方便收款，但不知道选哪个国家比较合适"></textarea>
         </div>
 
         <div class="form-group">
           <label class="form-label">2. 简单介绍一下你的情况</label>
-          <div class="form-hint">国家 / 公司 / 身份 / 收入来源，知道多少说多少</div>
+          <div class="form-hint">信息越完整，Blueprint 越能贴合你的实际情况</div>
           <textarea class="form-textarea" name="baseline" required placeholder="例如：人在国内，目前没有海外公司，客户主要在美国"></textarea>
         </div>
 
@@ -565,8 +596,9 @@
           <input class="form-input" type="email" name="email" required placeholder="your@email.com">
         </div>
 
+        <div class="beta-inline-note">内测期间，体验完成后提供简短反馈即可申请全额返现</div>
         <button type="submit" class="submit-btn" id="submitBtn">确认信息，进入付款</button>
-        <div class="form-footer-note">提交后，我会亲自分析你的情况，并在24小时内发送完整 Blueprint</div>
+        <div class="form-footer-note">提交后，我会亲自分析你的情况，并在 24 小时内发送完整 Blueprint</div>
       </form>
 
       <div class="payment-block" id="paymentBlock">
@@ -585,9 +617,9 @@
 
         <div class="payment-price">¥ 99</div>
 
-        <div class="beta-badge">内测名额 · 前 10 位</div>
+        <div class="beta-badge">项目内测阶段</div>
         <div class="beta-note">
-          作为前 10 位内测用户，体验完成后只需提供 1—2 句真实反馈，<strong>即可申请全额返现</strong>。
+          作为内测用户，体验完成后只需提供 1—2 句真实反馈，<strong>即可申请全额返现</strong>。
         </div>
 
         <div class="qr-wrap" style="margin-top: 28px;">
@@ -603,8 +635,8 @@
         </div>
 
         <div class="payment-note">
-          当前为 AssetPath 内测阶段，支付将通过我们的合作收款账户完成。<br>
-          你买的不是信息，而是一份真正可以开始执行的 Blueprint。
+          <p>当前为 AssetPath 内测阶段，支付将通过我们的合作收款账户完成。</p>
+          <p>你买的不是信息，而是一份真正可以开始执行的 Blueprint。</p>
         </div>
       </div>
 
@@ -632,7 +664,7 @@
       <div class="wechat-block">
         <div class="wechat-label">微信号</div>
         <div class="wechat-id" id="wechatId">AssetPath</div>
-        <div class="wechat-note">添加时备注「决策评估」，我们会在24小时内回复你</div>
+        <div class="wechat-note">添加时备注「决策评估」，我们会在 24 小时内回复你</div>
       </div>
 
       <button class="copy-btn" id="copyBtn" onclick="copyWechat()">
@@ -641,7 +673,8 @@
     </div>
 
     <div class="footer-note">
-      这不是一份通用报告。我们只在确认理解你的情况后，才开始分析——这是为什么我们需要先聊几句，而不是直接给你一个表单。
+      <p>这不是一份通用报告。我们只在确认理解你的情况后，才开始分析。</p>
+      <p>这是为什么我们需要先聊几句，而不是直接给你一个表单。</p>
     </div>
 
     <div class="footer-tagline">
