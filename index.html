@@ -406,6 +406,45 @@
         }
 
         /* ===================================
+           决策评估 CTA（跳转 /start）
+           =================================== */
+        .interview-cta {
+            display: inline-block;
+            background: #0C8FC4;
+            color: white;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.15s ease;
+        }
+        .interview-cta:hover {
+            background: #B8924A;
+            transform: translateY(-1px);
+        }
+        .interview-cta-wrap {
+            text-align: center;
+            margin-top: 36px;
+        }
+        .interview-cta-note {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #94A3B8;
+        }
+        .mid-cta-block {
+            text-align: center;
+            margin-top: 56px;
+            padding-top: 40px;
+            border-top: 1px solid #E5E7EB;
+        }
+        .mid-cta-title {
+            font-size: 18px;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        /* ===================================
            页脚
            =================================== */
         footer {
@@ -457,7 +496,9 @@
             }
 
             .screen {
-                padding: 25px 20px;
+                padding: 40px 20px;
+                min-height: 0;
+                justify-content: flex-start;
             }
 
             .screen-5-title {
@@ -543,13 +584,17 @@
             <div class="hero-logo">AssetPath｜资产蓝图</div>
             <h1 class="hero-title">
                 复杂世界里，<br>
-                找到适合自己的蓝图。
+                找到属于自己的蓝图。
             </h1>
             <p class="hero-subtitle">
                 关于资产、身份与生活方式，<br>
                 没有标准答案。<br>
-                <span class="hero-highlight">只有适合你的选择。</span>
+                <span class="hero-highlight">只有属于你的选择。</span>
             </p>
+            <div class="interview-cta-wrap">
+                <a href="/start" class="interview-cta">开始我的决策评估</a>
+                <div class="interview-cta-note">免费填写，确认需求后再付款</div>
+            </div>
         </div>
     </section>
 
@@ -619,6 +664,10 @@
                         没有完美的方案。每个选择都意味着另一个可能性的放弃。
                     </div>
                 </div>
+            </div>
+            <div class="mid-cta-block">
+                <div class="mid-cta-title">不确定该如何抉择？</div>
+                <a href="/start" class="interview-cta">立即决策评估</a>
             </div>
         </div>
     </section>
@@ -702,21 +751,14 @@
         </div>
     </section>
 
-    <!-- 第七屏：Early Access -->
-    <section class="screen" id="screen-7">
-        <div class="container">
-            <div class="cta-container">
-                <h2 class="cta-title">申请提前体验</h2>
-                <p class="cta-description">
-                    决策工具即将上线。<br>
-                    留下邮箱，第一时间获得使用权。
-                </p>
-                <form id="early-access-form" class="email-input-group">
-                    <input type="email" id="email-input" class="email-input" placeholder="你的邮箱地址" required>
-                    <button type="submit" class="email-button" id="submit-btn">立即申请</button>
-                </form>
-                <p id="form-message" style="margin-top: 12px; font-size: 14px; color: #0EA5E9; display: none;"></p>
-            </div>
+    <!-- 第六屏半：最终 CTA -->
+    <section class="screen" id="screen-6-5" style="background:#0F172A;">
+        <div class="container" style="text-align:center;">
+            <h2 style="font-size:24px;color:white;line-height:1.6;margin-bottom:32px;">
+                信息已经足够，<br>
+                建立属于你的资产蓝图吧！
+            </h2>
+            <a href="/start" class="interview-cta">开始我的 Blueprint</a>
         </div>
     </section>
 
@@ -771,78 +813,6 @@
         } else {
             loadLatestArticles();
         }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var form = document.getElementById('early-access-form');
-            var emailInput = document.getElementById('email-input');
-            var submitBtn = document.getElementById('submit-btn');
-            var formMessage = document.getElementById('form-message');
-            
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                var email = emailInput.value.trim();
-                if (!email) {
-                    showMessage('请输入邮箱地址', 'error');
-                    return;
-                }
-                
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email)) {
-                    showMessage('邮箱格式不正确', 'error');
-                    return;
-                }
-                
-                submitBtn.disabled = true;
-                submitBtn.textContent = '...';
-                formMessage.style.display = 'none';
-                
-                fetch('/api/early-access', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        email: email,
-                        source: 'homepage'
-                    })
-                })
-                .then(function(res) {
-                    return res.json();
-                })
-                .then(function(data) {
-                    if (data.success) {
-                        submitBtn.textContent = '✓ 申请已提交';
-                        submitBtn.style.background = '#10B981';
-                        emailInput.disabled = true;
-                        showMessage('申请已收到。Asset Blueprint 开放体验后，我们会第一时间通知你。', 'success');
-                    } else {
-                        showMessage('出错了，请稍后重试', 'error');
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = '立即申请';
-                    }
-                })
-                .catch(function(err) {
-                    console.error('Error:', err);
-                    showMessage('网络错误，请检查连接后重试', 'error');
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = '立即申请';
-                });
-            });
-            
-            function showMessage(text, type) {
-                formMessage.textContent = text;
-                formMessage.style.display = 'block';
-                if (type === 'error') {
-                    formMessage.style.color = '#EF4444';
-                } else if (type === 'success') {
-                    formMessage.style.color = '#10B981';
-                } else {
-                    formMessage.style.color = '#0EA5E9';
-                }
-            }
-        });
     </script>
 </body>
 
