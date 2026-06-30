@@ -1,1 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开始决策评估 - AssetPath 资产蓝图</title>
+<meta name="description" content="用几分钟时间，让我们了解你的情况，帮你整理一份属于你的跨境资产决策路径。">
+<style>
+  :root {
+    --navy: #1A1A2E;
+    --navy-soft: #2D2D44;
+    --cream: #FAF9F6;
+    --gold: #B8924A;
+    --gold-soft: #D4B97C;
+    --gray: #6B6B76;
+    --gray-light: #9B9BA6;
+    --border: #E5E3DD;
+  }
 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  .site-header {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .site-header .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: Georgia, "Songti SC", serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+  }
+  .logo span {
+    color: var(--gold);
+  }
+  .back-link {
+    font-size: 14px;
+    color: var(--gray);
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--navy); }
+
+  /* Hero / Mirror line */
+  .hero {
+    padding: 88px 0 56px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .mirror-line {
+    font-family: Georgia, "Songti SC", serif;
+    font-size: 30px;
+    line-height: 1.5;
+    color: var(--navy);
+    font-weight: 400;
+    letter-spacing: 0.2px;
+  }
+  .mirror-line .em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .sub {
+    margin-top: 28px;
+    font-size: 17px;
+    color: var(--gray);
+    line-height: 1.8;
+  }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 56px 0;
+  }
+
+  /* Process */
+  .process-title {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .process-line {
+    display: flex;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+  .process-line:last-child { border-bottom: none; }
+  .process-mark {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--gold-soft);
+    font-size: 18px;
+    width: 20px;
+    flex-shrink: 0;
+  }
+  .process-text {
+    font-size: 16px;
+    color: var(--navy-soft);
+  }
+  .process-text strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* CTA Card */
+  .cta-card {
+    margin-top: 56px;
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 40px 36px;
+    color: var(--cream);
+  }
+  .cta-card-title {
+    font-family: Georgia, "Songti SC", serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+  }
+  .cta-card-text {
+    font-size: 15px;
+    color: rgba(250, 249, 246, 0.72);
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+  .cta-card-text strong {
+    color: var(--gold-soft);
+    font-weight: 600;
+  }
+
+  .wechat-block {
+    background: rgba(250, 249, 246, 0.06);
+    border: 1px solid rgba(250, 249, 246, 0.14);
+    border-radius: 3px;
+    padding: 20px 22px;
+    margin-bottom: 22px;
+  }
+  .wechat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold-soft);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .wechat-id {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    font-family: Georgia, monospace;
+  }
+  .wechat-note {
+    font-size: 13.5px;
+    color: rgba(250, 249, 246, 0.55);
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 13px 26px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    width: 100%;
+    justify-content: center;
+  }
+  .copy-btn:hover { background: var(--gold-soft); }
+  .copy-btn:active { transform: scale(0.99); }
+  .copy-btn.copied { background: #6B8F6B; color: #FFFFFF; }
+
+  /* Footer note */
+  .footer-note {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    font-size: 13.5px;
+    color: var(--gray-light);
+    line-height: 1.7;
+  }
+
+  .footer-tagline {
+    margin-top: 48px;
+    padding: 32px 0 64px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--gray-light);
+    letter-spacing: 0.3px;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 56px 0 40px; }
+    .mirror-line { font-size: 24px; }
+    .cta-card { padding: 32px 24px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+
+  /* Form styles */
+  .interview-form {
+    margin-top: 56px;
+  }
+  .form-section-title {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .form-group {
+    margin-bottom: 28px;
+  }
+  .form-label {
+    display: block;
+    font-size: 15.5px;
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .form-hint {
+    font-size: 13.5px;
+    color: var(--gray-light);
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .form-textarea, .form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--navy);
+    background: #FFFFFF;
+    resize: vertical;
+    line-height: 1.6;
+  }
+  .form-textarea {
+    min-height: 88px;
+  }
+  .form-textarea:focus, .form-input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184, 146, 74, 0.12);
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 16px 26px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    margin-top: 8px;
+  }
+  .submit-btn:hover { background: var(--gold-soft); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .form-footer-note {
+    font-size: 13px;
+    color: var(--gray-light);
+    margin-top: 14px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .success-message {
+    display: none;
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 40px 36px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .success-message.show { display: block; }
+  .success-message .check {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .success-message h3 {
+    font-family: Georgia, "Songti SC", serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+  }
+  .success-message p {
+    font-size: 15px;
+    color: rgba(250, 249, 246, 0.75);
+    line-height: 1.7;
+  }
+
+  .divider-or {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 40px 0;
+    color: var(--gray-light);
+    font-size: 13px;
+  }
+  .divider-or::before, .divider-or::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Payment block (shown after form submit) */
+  .payment-block {
+    display: none;
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 40px 36px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .payment-block.show { display: block; }
+  .payment-check {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: var(--gold-soft);
+  }
+  .payment-title {
+    font-family: Georgia, "Songti SC", serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+  }
+  .payment-text {
+    font-size: 15px;
+    color: rgba(250, 249, 246, 0.75);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .payment-text strong {
+    color: var(--gold-soft);
+  }
+  .qr-wrap {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 20px;
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+  .qr-wrap img {
+    width: 220px;
+    height: 220px;
+    display: block;
+    object-fit: contain;
+  }
+  .payment-price {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: var(--gold-soft);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .payment-note {
+    font-size: 13.5px;
+    color: rgba(250, 249, 246, 0.55);
+    line-height: 1.7;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(250, 249, 246, 0.12);
+  }
+
+  .beta-badge {
+    display: inline-block;
+    background: rgba(184, 146, 74, 0.18);
+    color: var(--gold-soft);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+  .beta-note {
+    font-size: 14px;
+    color: rgba(250, 249, 246, 0.78);
+    line-height: 1.7;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .beta-note strong {
+    color: var(--gold-soft);
+  }
+
+  .next-step-note {
+    margin-top: 24px;
+    padding: 16px 18px;
+    background: rgba(184, 146, 74, 0.08);
+    border: 1px solid rgba(184, 146, 74, 0.2);
+    border-radius: 3px;
+    font-size: 13.5px;
+    color: rgba(250, 249, 246, 0.82);
+    line-height: 1.7;
+  }
+
+  .value-checklist {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .vc-item {
+    font-size: 14px;
+    color: rgba(250, 249, 246, 0.82);
+    padding: 4px 0;
+  }
+
+  .paid-btn {
+    width: 100%;
+    background: transparent;
+    color: var(--gold-soft);
+    border: 1px solid rgba(184, 146, 74, 0.4);
+    padding: 13px 26px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.15s ease;
+  }
+  .paid-btn:hover {
+    background: rgba(184, 146, 74, 0.1);
+    border-color: var(--gold-soft);
+  }
+
+  .confirmed-block {
+    display: none;
+    background: var(--navy);
+    border-radius: 4px;
+    padding: 40px 36px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .confirmed-block.show { display: block; }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="logo">Asset<span>Path</span></div>
+      <a href="/" class="back-link">返回首页</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="hero">
+      <div class="eyebrow">Decision Interview</div>
+      <h1 class="mirror-line">
+        你面对的，从来不是<span class="em">一个</span>选择题。<br>
+        而是一连串<span class="em">互相牵制</span>的决策。
+      </h1>
+      <p class="sub">
+        用几分钟时间告诉我们你的情况。我们不会给你更多信息，而是帮你找到真正应该做的决策。
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <div class="process-title">接下来会发生什么</div>
+      <div class="process-line">
+        <span class="process-mark">i.</span>
+        <span class="process-text"><strong>简单聊几句</strong> —— 你的目标、现状、约束和时间，像和顾问对话一样，不是填表</span>
+      </div>
+      <div class="process-line">
+        <span class="process-mark">ii.</span>
+        <span class="process-text"><strong>我们整理你的结构</strong> —— 确认理解准确后，再开始分析</span>
+      </div>
+      <div class="process-line">
+        <span class="process-mark">iii.</span>
+        <span class="process-text"><strong>24 小时内交付</strong> —— 一份 Decision Blueprint：推荐方案、为什么、下一步行动</span>
+      </div>
+    </section>
+
+    <section class="interview-form">
+      <div class="form-section-title">开始你的决策评估</div>
+      <p style="font-size: 15px; color: var(--gray); margin-bottom: 32px; line-height: 1.75;">
+        你将获得一份<strong style="color: var(--navy);">可以直接执行的决策路径</strong>，而不是信息整理。回答以下四个问题，我们会在 <strong style="color: var(--navy);">24 小时内</strong>把完整分析发到你的邮箱。<br><br>
+        <span style="color: var(--gold); font-weight: 600;">前 10 位用户为内测名额</span>，体验完成后提供简短反馈即可申请全额返现。
+      </p>
+
+      <form id="decisionForm" action="https://formspree.io/f/xpqgjloa" method="POST">
+
+        <div class="form-group">
+          <label class="form-label">1. 现在最困扰你的问题是什么？</label>
+          <div class="form-hint">不用想得很完整，简单说说就好</div>
+          <textarea class="form-textarea" name="goal" required placeholder="例如：想在海外开公司方便收款，但不知道选哪个国家比较合适"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">2. 简单介绍一下你的情况</label>
+          <div class="form-hint">国家 / 公司 / 身份 / 收入来源，知道多少说多少</div>
+          <textarea class="form-textarea" name="baseline" required placeholder="例如：人在国内，目前没有海外公司，客户主要在美国"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">3. 有没有什么条件是你不能改变的？</label>
+          <div class="form-hint">比如不能离开某个国家、必须保留某种身份等，没有也可以填"没有"</div>
+          <textarea class="form-textarea" name="constraints" placeholder="例如：暂时不能离开中国内地"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">4. 你希望大概多久内看到结果？</label>
+          <div class="form-hint">紧急 / 一年左右 / 长期规划都可以</div>
+          <input class="form-input" type="text" name="timeline" required placeholder="例如：希望3个月内完成">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">你的邮箱</label>
+          <div class="form-hint">完整的 Blueprint 会发到这里</div>
+          <input class="form-input" type="email" name="email" required placeholder="your@email.com">
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">确认信息，进入付款</button>
+        <div class="form-footer-note">提交后，我会亲自分析你的情况，并在24小时内发送完整 Blueprint</div>
+      </form>
+
+      <div class="payment-block" id="paymentBlock">
+        <div class="payment-check">✓</div>
+        <div class="payment-title">已收到你的信息</div>
+        <p class="payment-text">
+          我已经开始分析你的结构。完成付款后，我会亲自完成你的 Blueprint，并在 <strong>24 小时内</strong>发送到你的邮箱。
+        </p>
+
+        <div class="value-checklist">
+          <div class="vc-item">✓ 专属于你的 Personalized Blueprint</div>
+          <div class="vc-item">✓ 24 小时内交付</div>
+          <div class="vc-item">✓ 邮件答疑支持</div>
+          <div class="vc-item">✓ 一次免费修改</div>
+        </div>
+
+        <div class="payment-price">¥ 99</div>
+
+        <div class="beta-badge">内测名额 · 前 10 位</div>
+        <div class="beta-note">
+          作为前 10 位内测用户，体验完成后只需提供 1—2 句真实反馈，<strong>即可申请全额返现</strong>。
+        </div>
+
+        <div class="qr-wrap" style="margin-top: 28px;">
+          <img src="payment_qr.jpg" alt="支付二维码">
+        </div>
+        <div style="font-size: 13.5px; color: rgba(250,249,246,0.6);">扫码支付（推荐支付宝）</div>
+        <div style="font-size: 13px; color: rgba(250,249,246,0.45); margin-top: 8px;">付款完成即可关闭页面，无需截图，也无需再次提交。</div>
+
+        <button type="button" class="paid-btn" id="paidBtn" onclick="confirmPaid()">我已完成付款</button>
+
+        <div class="next-step-note">
+          完成付款后：我会阅读你的情况，如有需要确认的地方会通过邮件联系你，并在 24 小时内发送完整 Blueprint。
+        </div>
+
+        <div class="payment-note">
+          当前为 AssetPath 内测阶段，支付将通过我们的合作收款账户完成。<br>
+          你买的不是信息，而是一份真正可以开始执行的 Blueprint。
+        </div>
+      </div>
+
+      <div class="confirmed-block" id="confirmedBlock">
+        <div class="payment-check">✓</div>
+        <div class="payment-title">已收到，谢谢你的信任</div>
+        <p class="payment-text" style="margin-bottom: 0;">
+          接下来：<br><br>
+          ① 我会仔细阅读你的情况<br>
+          ② 如有需要确认的地方，会通过邮件联系你<br>
+          ③ 24 小时内，完整 Blueprint 会发送到你的邮箱<br><br>
+          现在可以关闭这个页面了。
+        </p>
+      </div>
+    </section>
+
+    <div class="divider-or">或者</div>
+
+    <div class="cta-card">
+      <div class="cta-card-title">直接联系顾问</div>
+      <p class="cta-card-text">
+        如果你更习惯直接聊，也可以添加微信，备注「决策评估」，我们会主动联系你。
+      </p>
+
+      <div class="wechat-block">
+        <div class="wechat-label">微信号</div>
+        <div class="wechat-id" id="wechatId">AssetPath</div>
+        <div class="wechat-note">添加时备注「决策评估」，我们会在24小时内回复你</div>
+      </div>
+
+      <button class="copy-btn" id="copyBtn" onclick="copyWechat()">
+        复制微信号
+      </button>
+    </div>
+
+    <div class="footer-note">
+      这不是一份通用报告。我们只在确认理解你的情况后，才开始分析——这是为什么我们需要先聊几句，而不是直接给你一个表单。
+    </div>
+
+    <div class="footer-tagline">
+      From Information. To Decisions.
+    </div>
+
+  </main>
+
+  <script>
+    function copyWechat() {
+      const id = document.getElementById('wechatId').innerText;
+      const btn = document.getElementById('copyBtn');
+      navigator.clipboard.writeText(id).then(() => {
+        btn.innerText = '已复制 ✓';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerText = '复制微信号';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(() => {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('wechatId'));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        btn.innerText = '已复制 ✓';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerText = '复制微信号';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+
+    const form = document.getElementById('decisionForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const paymentBlock = document.getElementById('paymentBlock');
+    const confirmedBlock = document.getElementById('confirmedBlock');
+
+    function confirmPaid() {
+      paymentBlock.classList.remove('show');
+      paymentBlock.style.display = 'none';
+      confirmedBlock.classList.add('show');
+      confirmedBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // 静默通知：告诉你用户点击了"我已完成付款"，方便你及时开始处理
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ notice: '用户已点击"我已完成付款"，请检查到账并开始处理 Blueprint' })
+      }).catch(() => {});
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerText = '提交中...';
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          paymentBlock.classList.add('show');
+          paymentBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.innerText = '确认信息，进入付款';
+          alert('提交遇到问题，请重试，或直接添加下方微信联系我们');
+        }
+      }).catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerText = '确认信息，进入付款';
+        alert('提交遇到问题，请重试，或直接添加下方微信联系我们');
+      });
+    });
+  </script>
+
+</body>
+</html>
