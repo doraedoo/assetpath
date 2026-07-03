@@ -409,6 +409,32 @@
             background: #0284C7;
         }
 
+        /* 最新文章标题 hover */
+        .latest-article-link {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0F172A;
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+        .latest-article-link:hover {
+            color: #0EA5E9;
+            text-decoration: underline;
+        }
+
+        /* 查看更多文章 hover */
+        .more-articles-link {
+            font-size: 14px;
+            color: #0EA5E9;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.15s ease;
+        }
+        .more-articles-link:hover {
+            color: #0284C7;
+            text-decoration: underline;
+        }
+
         /* ===================================
            决策评估 CTA（跳转 /start）
            =================================== */
@@ -694,7 +720,7 @@
                     <p style="color: #94a3b8;">加载中...</p>
                 </div>
                 <div id="more-articles-link" style="margin-top:20px;text-align:center;padding-top:20px;border-top:1px solid #e5e7eb;">
-                    <a href="/articles/" style="font-size:14px;color:#0EA5E9;text-decoration:none;font-weight:600;">查看更多文章 →</a>
+                    <a href="/articles/" class="more-articles-link">查看更多文章 →</a>
                 </div>
             </div>
             <div class="topic-grid">
@@ -799,7 +825,7 @@
                     var html = '';
                     latestArticles.forEach(function(article) {
                         var articleUrl = '/articles/' + article.slug + '.html';
-                        html += '<div style="margin-bottom:12px;"><a href="' + articleUrl + '" style="font-size:22px;font-weight:700;color:#0F172A;text-decoration:none;">' + article.title + '</a></div>';
+                        html += '<div style="margin-bottom:12px;"><a href="' + articleUrl + '" class="latest-article-link">' + article.title + '</a></div>';
                     });
                     
                     container.innerHTML = html;
