@@ -580,33 +580,68 @@
       <div class="form-section-title">开始你的决策评估</div>
       <p style="font-size: 15px; color: var(--gray); margin-bottom: 40px; line-height: 1.85;">
         你将获得一份<strong style="color: var(--navy);">可以直接执行的决策路径</strong>，<br class="mobile-only">而不是信息整理。<br>
-        回答以下四个问题，我们会在 24 小时内把完整分析发到你的邮箱。
+        回答以下问题，我们会在 48 小时内把完整 Blueprint 发到你的邮箱。
       </p>
 
       <form id="decisionForm" action="https://formspree.io/f/xpqgjloa" method="POST">
 
         <div class="form-group">
-          <label class="form-label">1. 现在最困扰你的问题是什么？</label>
-          <div class="form-hint">越详细，我们越能给出精准的判断</div>
-          <textarea class="form-textarea" name="goal" required placeholder="例如：想在海外开公司方便收款，但不知道选哪个国家比较合适"></textarea>
+          <label class="form-label">1. 你现在最担心的是什么？</label>
+          <div class="form-hint">选择最接近你现在心态的一项</div>
+          <select class="form-input" name="q1_anxiety" required>
+            <option value="">请选择</option>
+            <option value="A">钱放在国内，总觉得不安全</option>
+            <option value="B">政策环境越来越不确定，想多一条退路</option>
+            <option value="C">孩子将来的路，不想只有一个选择</option>
+            <option value="D">生活质量还可以，只是想了解更多可能性</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">2. 简单介绍一下你的情况</label>
-          <div class="form-hint">信息越完整，Blueprint 越能贴合你的实际情况</div>
-          <textarea class="form-textarea" name="baseline" required placeholder="例如：人在国内，目前没有海外公司，客户主要在美国"></textarea>
+          <label class="form-label">2. 你的资产目前主要放在哪里？</label>
+          <select class="form-input" name="q2_status" required>
+            <option value="">请选择</option>
+            <option value="A">全部在国内（存款、房产、股票等）</option>
+            <option value="B">已经有一部分在境外（账户、资产等）</option>
+            <option value="C">主要是生意，个人资产还没认真规划过</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">3. 有没有什么条件是你不能改变的？</label>
-          <div class="form-hint">比如不能离开某个国家、必须保留某种身份等，没有也可以填"没有"</div>
-          <textarea class="form-textarea" name="constraints" placeholder="例如：暂时不能离开中国内地"></textarea>
+          <label class="form-label">3. 你现在最想先解决哪一步？</label>
+          <select class="form-input" name="q3_priority" required>
+            <option value="">请选择</option>
+            <option value="A">把钱安全地转到境外</option>
+            <option value="B">境外的钱怎么投资、怎么增值</option>
+            <option value="C">两个都想，但不知道从哪里开始</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">4. 你希望决策确定后，多久落地？</label>
-          <div class="form-hint">紧急 / 一年左右 / 长期规划都可以</div>
-          <input class="form-input" type="text" name="timeline" required placeholder="例如：希望3个月内完成公司注册">
+          <label class="form-label">4. 你大概有多少资金可以用于这次规划？</label>
+          <select class="form-input" name="budget" required>
+            <option value="">请选择</option>
+            <option value="A">50 万人民币以内</option>
+            <option value="B">50 万～200 万人民币</option>
+            <option value="C">200 万人民币以上</option>
+            <option value="D">主要是生意资金，个人流动资金有限</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">5. 你的家庭情况是？</label>
+          <select class="form-input" name="family" required>
+            <option value="">请选择</option>
+            <option value="A">单身或已婚，暂时没有孩子相关规划</option>
+            <option value="B">有孩子，正在考虑教育或移居问题</option>
+            <option value="C">孩子已成年，主要考虑自己和配偶的安排</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">6. 还有什么想让我们了解的？</label>
+          <div class="form-hint">年龄、职业、具体情况、最想解决的问题等，信息越完整 Blueprint 越准确</div>
+          <textarea class="form-textarea" name="additional" placeholder="例如：55 岁，自由职业，想给儿子保留第二身份选项"></textarea>
         </div>
 
         <div class="form-group">
