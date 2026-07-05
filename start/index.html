@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)file:///C:/Users/YOGA/Downloads/start-index_3.html -->
+<!-- saved from url=(0050)file:///C:/Users/YOGA/Downloads/start-index_4.html -->
 <html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -632,7 +632,7 @@
               <input type="checkbox" name="constraint_stay" value="需要长期留在国内" style="width: 16px; height: 16px;"> 需要长期留在国内，无法移居
             </label>
             <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="constraint_family" value="有孩子需要考虑" style="width: 16px; height: 16px;"> 有孩子，需要为家庭保留选择
+              <input type="checkbox" id="hasChildren" name="constraint_family" value="有孩子需要考虑" style="width: 16px; height: 16px;" onchange="toggleChildQuestion()"> 有孩子，需要为家庭保留选择
             </label>
             <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
               <input type="checkbox" name="constraint_budget" value="可用资金有限" style="width: 16px; height: 16px;"> 可用资金有限（50 万人民币以内）
@@ -644,6 +644,12 @@
               <input type="checkbox" name="constraint_backup" value="希望有备用方案" style="width: 16px; height: 16px;"> 希望有一个备用方案，以防万一
             </label>
           </div>
+        </div>
+
+        <div class="form-group" id="childQuestion" style="display: none;">
+          <label class="form-label">5a. 关于孩子（如果适用）</label>
+          <div class="form-hint">孩子现在大概几岁？未来是否考虑留学或长期在海外发展？如果有陪读 / 一起生活的可能，也可以简单说明。</div>
+          <textarea class="form-textarea" name="child_situation" placeholder="例：孩子 12 岁，有留学打算，配偶可能陪读 / 孩子 8 岁，还没想好，只是想保留选项"></textarea>
         </div>
 
         <div class="form-group">
@@ -819,6 +825,19 @@
     });
   </script>
 
+
+<script>
+function toggleChildQuestion() {
+  var checkbox = document.getElementById('hasChildren');
+  var question = document.getElementById('childQuestion');
+  if (checkbox.checked) {
+    question.style.display = 'block';
+  } else {
+    question.style.display = 'none';
+    question.querySelector('textarea').value = '';
+  }
+}
+</script>
 
 
 </body></html>
