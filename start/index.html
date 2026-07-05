@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)file:///C:/Users/YOGA/Downloads/start-index_4.html -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>开始决策评估 - AssetPath 资产蓝图</title>
 <meta name="description" content="用几分钟时间，让我们了解你的情况，帮你整理一份属于你的跨境资产决策路径。">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./index_files/css2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #1A1A2E;
@@ -540,7 +540,7 @@
   <header class="site-header">
     <div class="wrap">
       <div class="logo">Asset<span>Path</span></div>
-      <a href="file:///C:/" class="back-link">返回首页</a>
+      <a href="/" class="back-link">返回首页</a>
     </div>
   </header>
 
@@ -586,92 +586,73 @@
       <form id="decisionForm" action="https://formspree.io/f/xpqgjloa" method="POST">
 
         <div class="form-group">
-          <label class="form-label">1. 你现在主要在做什么？</label>
-          <div class="form-hint">例：在国内经营企业 / 自由职业 / 受雇 / 已退休</div>
-          <textarea class="form-textarea" name="situation" required="" placeholder="一句话描述即可"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">2. 如果未来 1-3 年大环境发生变化，你最担心哪件事先出问题？</label>
-          <div class="form-hint">用你自己的话，一句话就够。尽量具体，不要用「不确定」这种抽象词</div>
-          <textarea class="form-textarea" name="concern" required="" placeholder="例：担心资金转不出去 / 孩子出不了国 / 生意受到限制"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">3. 有没有什么情况是你绝对不希望出现的？</label>
-          <div class="form-hint">写一个最不能接受的结果即可</div>
-          <textarea class="form-textarea" name="dealbreaker" required="" placeholder="例：资产取不出来 / 孩子没有选择 / 人走不了 / 收入来源断掉"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">4. 你的资产目前主要在哪里？（可多选）</label>
-          <div class="form-hint">勾选所有适用的选项</div>
-          <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="asset_domestic_bank" value="国内银行存款" style="width: 16px; height: 16px;"> 国内银行存款
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="asset_domestic_invest" value="国内投资账户" style="width: 16px; height: 16px;"> 国内投资账户（股票 / 基金）
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="asset_overseas_invest" value="境外证券账户" style="width: 16px; height: 16px;"> 境外证券账户
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="asset_overseas_bank" value="境外银行账户" style="width: 16px; height: 16px;"> 境外银行账户
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="asset_business" value="公司经营资产" style="width: 16px; height: 16px;"> 主要是生意 / 公司资产
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">5. 以下哪些情况是确定成立的？（可多选）</label>
-          <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="constraint_stay" value="需要长期留在国内" style="width: 16px; height: 16px;"> 需要长期留在国内，无法移居
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" id="hasChildren" name="constraint_family" value="有孩子需要考虑" style="width: 16px; height: 16px;" onchange="toggleChildQuestion()"> 有孩子，需要为家庭保留选择
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="constraint_budget" value="可用资金有限" style="width: 16px; height: 16px;"> 可用资金有限（50 万人民币以内）
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="constraint_proactive" value="提前准备" style="width: 16px; height: 16px;"> 没有明显压力，但想提前做准备
-            </label>
-            <label style="display: flex; align-items: center; gap: 10px; font-size: 15px; cursor: pointer;">
-              <input type="checkbox" name="constraint_backup" value="希望有备用方案" style="width: 16px; height: 16px;"> 希望有一个备用方案，以防万一
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group" id="childQuestion" style="display: none;">
-          <label class="form-label">5a. 关于孩子（如果适用）</label>
-          <div class="form-hint">孩子现在大概几岁？未来是否考虑留学或长期在海外发展？如果有陪读 / 一起生活的可能，也可以简单说明。</div>
-          <textarea class="form-textarea" name="child_situation" placeholder="例：孩子 12 岁，有留学打算，配偶可能陪读 / 孩子 8 岁，还没想好，只是想保留选项"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">6. 可用于这次规划的资金大概是多少？</label>
-          <select class="form-input" name="budget" required="">
+          <label class="form-label">1. 你现在最担心的是什么？</label>
+          <div class="form-hint">选择最接近你现在心态的一项</div>
+          <select class="form-input" name="q1_anxiety" required>
             <option value="">请选择</option>
-            <option value="50万人民币以内">50 万人民币以内</option>
-            <option value="50万～200万人民币">50 万～200 万人民币</option>
-            <option value="200万人民币以上">200 万人民币以上</option>
-            <option value="主要是生意资金，个人流动资金有限">主要是生意资金，个人流动资金有限</option>
+            <option value="A">钱放在国内，总觉得不安全</option>
+            <option value="B">政策环境越来越不确定，想多一条退路</option>
+            <option value="C">孩子将来的路，不想只有一个选择</option>
+            <option value="D">生活质量还可以，只是想了解更多可能性</option>
           </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">2. 你的资产目前主要放在哪里？</label>
+          <select class="form-input" name="q2_status" required>
+            <option value="">请选择</option>
+            <option value="A">全部在国内（存款、房产、股票等）</option>
+            <option value="B">已经有一部分在境外（账户、资产等）</option>
+            <option value="C">主要是生意，个人资产还没认真规划过</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">3. 你现在最想先解决哪一步？</label>
+          <select class="form-input" name="q3_priority" required>
+            <option value="">请选择</option>
+            <option value="A">把钱安全地转到境外</option>
+            <option value="B">境外的钱怎么投资、怎么增值</option>
+            <option value="C">两个都想，但不知道从哪里开始</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">4. 你大概有多少资金可以用于这次规划？</label>
+          <select class="form-input" name="budget" required>
+            <option value="">请选择</option>
+            <option value="A">50 万人民币以内</option>
+            <option value="B">50 万～200 万人民币</option>
+            <option value="C">200 万人民币以上</option>
+            <option value="D">主要是生意资金，个人流动资金有限</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">5. 你的家庭情况是？</label>
+          <select class="form-input" name="family" required>
+            <option value="">请选择</option>
+            <option value="A">单身或已婚，暂时没有孩子相关规划</option>
+            <option value="B">有孩子，正在考虑教育或移居问题</option>
+            <option value="C">孩子已成年，主要考虑自己和配偶的安排</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">6. 还有什么想让我们了解的？</label>
+          <div class="form-hint">年龄、职业、具体情况、最想解决的问题等，信息越完整 Blueprint 越准确</div>
+          <textarea class="form-textarea" name="additional" placeholder="例如：55 岁，自由职业，想给儿子保留第二身份选项"></textarea>
         </div>
 
         <div class="form-group">
           <label class="form-label">你的邮箱</label>
           <div class="form-hint">完整的 Blueprint 会发到这里</div>
-          <input class="form-input" id="emailInput" type="email" name="email" required="" placeholder="your@email.com">
+          <input class="form-input" id="emailInput" type="email" name="email" required placeholder="your@email.com">
         </div>
 
         <div class="beta-inline-note">内测期间，体验完成后提供简短反馈，<br class="mobile-only">即可申请全额返现</div>
         <button type="submit" class="submit-btn" id="submitBtn">确认信息，进入付款</button>
-        <div class="form-footer-note">提交后，我会亲自分析你的情况，<br>并在 48 小时内发送完整 Blueprint</div>
+        <div class="form-footer-note">提交后，我会亲自分析你的情况，<br>并在 24 小时内发送完整 Blueprint</div>
       </form>
 
       <div class="payment-block" id="paymentBlock">
@@ -689,7 +670,7 @@
         </div>
 
         <div class="qr-wrap" style="margin-top: 28px;">
-          <img src="payment_qr.jpg?v=2" alt="支付二维码">
+          <img src="/start/payment_qr.jpg" alt="支付二维码">
         </div>
         <div style="font-size: 13.5px; color: rgba(250,249,246,0.6);">扫码支付（推荐支付宝）</div>
 
@@ -825,19 +806,5 @@
     });
   </script>
 
-
-<script>
-function toggleChildQuestion() {
-  var checkbox = document.getElementById('hasChildren');
-  var question = document.getElementById('childQuestion');
-  if (checkbox.checked) {
-    question.style.display = 'block';
-  } else {
-    question.style.display = 'none';
-    question.querySelector('textarea').value = '';
-  }
-}
-</script>
-
-
-</body></html>
+</body>
+</html>
